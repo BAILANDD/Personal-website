@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Portfolio Mono";
+  src: url("./assets/fonts/PortfolioMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #000000;
   --text: #ffffff;
@@ -46,6 +54,8 @@
   --network-grid-y: 0px;
   --network-grid-minor-color: rgb(26 26 38 / 0.34);
   --network-grid-major-color: rgb(38 38 77 / 0.28);
+  --workspace-reveal-duration: 520ms;
+  --workspace-reveal-shift: 8px;
   --td-current-line: rgb(52 255 50);
   --td-current-inset: rgb(39 108 41);
   --td-top-purple: rgb(89 79 124);
@@ -72,7 +82,7 @@ body {
 
 body {
   color: var(--text);
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: "Portfolio Mono", Menlo, Monaco, "Courier New", monospace;
   font-size: var(--shell-font-size);
   font-weight: 400;
   line-height: var(--shell-line-height);
@@ -167,6 +177,9 @@ dl {
   line-height: var(--shell-line-height);
   flex: 0 0 auto;
   width: fit-content;
+  transition:
+    opacity var(--workspace-reveal-duration) ease,
+    transform var(--workspace-reveal-duration) ease;
 }
 
 .workspace-mode-stack {
@@ -174,6 +187,24 @@ dl {
   flex: 1 1 auto;
   min-height: 0;
   margin-top: clamp(54px, 7vh, 76px);
+  transition:
+    opacity var(--workspace-reveal-duration) ease,
+    transform var(--workspace-reveal-duration) ease;
+}
+
+.workspace-panel.is-booting .workspace-path,
+.workspace-panel.is-booting .workspace-mode-stack {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(var(--workspace-reveal-shift));
+}
+
+.workspace-panel.is-workspace-revealing .workspace-path,
+.workspace-panel.is-workspace-revealing .workspace-mode-stack,
+.workspace-panel.is-workspace-ready .workspace-path,
+.workspace-panel.is-workspace-ready .workspace-mode-stack {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .workspace-content,
@@ -732,6 +763,11 @@ button.viewer-active-cell {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .workspace-path,
+  .workspace-mode-stack {
+    transition: none;
+  }
+
   .type-line.is-typing::after {
     content: "";
   }

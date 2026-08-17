@@ -1,4 +1,6 @@
-const typedLines = [...document.querySelectorAll("[data-type-parts]")];
+const promptLine = document.querySelector(".prompt-line");
+const bootLines = [...document.querySelectorAll(".boot-sequence .type-line")];
+const helpLines = [...document.querySelectorAll(".help-block .type-line")];
 const operatorLayer = document.getElementById("operator-layer");
 const workspacePanel = document.querySelector(".workspace-panel");
 const workspacePath = document.querySelector(".workspace-path");
@@ -7,6 +9,7 @@ const projectDetails = [...document.querySelectorAll("[data-project-detail]")];
 
 const TYPE_SPEED = 18;
 const LINE_PAUSE = 80;
+const WORKSPACE_REVEAL_MS = 520;
 const DRAG_THRESHOLD = 3;
 const WHEEL_ZOOM_THRESHOLD = 40;
 const WORKSPACE_ZOOM_LEVELS = [0.72, 0.82, 0.92, 1, 1.12, 1.25, 1.4];
@@ -119,32 +122,73 @@ function renderTypedParts(element, parts, visibleLength) {
   element.replaceChildren(fragment);
 }
 
-async function typeLine(element, parts) {
+function getPartsLength(parts) {
+  return parts.reduce((total, part) => total + (part.text || "").length, 0);
+}
+
+async function typeLine(element, parts, speed = TYPE_SPEED) {
   element.classList.add("is-typing");
-  const length = parts.reduce((total, part) => total + (part.text || "").length, 0);
+  const length = getPartsLength(parts);
 
   for (let i = 1; i <= length; i += 1) {
     renderTypedParts(element, parts, i);
-    await sleep(TYPE_SPEED);
+    await sleep(speed);
   }
 
   element.classList.remove("is-typing");
 }
 
-async function bootTerminal() {
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  for (const line of typedLines) {
+async function typeLines(lines, speed = TYPE_SPEED) {
+  for (const line of lines) {
     const parts = getParts(line);
 
-    if (reducedMotion) {
-      renderTypedParts(line, parts, Infinity);
-      continue;
-    }
-
-    await typeLine(line, parts);
+    await typeLine(line, parts, speed);
     await sleep(LINE_PAUSE);
   }
+}
+
+function renderLines(lines) {
+  lines.forEach((line) => {
+    renderTypedParts(line, getParts(line), Infinity);
+  });
+}
+
+async function revealWorkspace(reducedMotion) {
+  if (!workspacePanel || !workspacePath) return;
+
+  const parts = getParts(workspacePath);
+
+  workspacePanel.classList.remove("is-booting");
+
+  if (reducedMotion) {
+    renderTypedParts(workspacePath, parts, Infinity);
+    workspacePanel.classList.add("is-workspace-ready");
+    return;
+  }
+
+  workspacePanel.classList.add("is-workspace-revealing");
+
+  const pathTypeSpeed = Math.max(TYPE_SPEED, Math.round(WORKSPACE_REVEAL_MS / Math.max(1, getPartsLength(parts))));
+  await typeLine(workspacePath, parts, pathTypeSpeed);
+
+  workspacePanel.classList.remove("is-workspace-revealing");
+  workspacePanel.classList.add("is-workspace-ready");
+}
+
+async function bootTerminal() {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const introLines = [promptLine, ...bootLines].filter(Boolean);
+
+  if (reducedMotion) {
+    renderLines([...introLines, ...helpLines]);
+    await revealWorkspace(true);
+    return;
+  }
+
+  await typeLines(introLines);
+  await revealWorkspace(false);
+  await sleep(LINE_PAUSE);
+  await typeLines(helpLines);
 }
 
 function escapeHTML(value) {

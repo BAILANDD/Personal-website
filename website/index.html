@@ -8,7 +8,14 @@
       name="description"
       content="A minimal portfolio workspace shell with terminal help and an empty works area."
     />
-    <link rel="stylesheet" href="./styles.css?v=20260817-static-media1" />
+    <link
+      rel="preload"
+      href="./assets/fonts/PortfolioMono-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260818-workspace-reveal1" />
   </head>
   <body>
     <main class="home-shell" aria-label="Portfolio workspace shell">
@@ -33,7 +40,7 @@
           <div class="command-list" role="list" aria-label="Command list">
             <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"click                   = select"}]'></p>
             <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"drag                    = pan"}]'></p>
-            <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"i / double clicki       = enter"}]'></p>
+            <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"i / double click        = enter"}]'></p>
             <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"u                       = out"}]'></p>
           </div>
         </section>
@@ -41,7 +48,7 @@
 
       <div class="shell-divider" aria-hidden="true"></div>
 
-      <section class="workspace-panel" aria-label="Workspace shell">
+      <section class="workspace-panel is-booting" aria-label="Workspace shell">
         <p class="workspace-path type-line" data-type-parts='[{"text":"/works"}]'></p>
         <div class="workspace-mode-stack">
           <div class="workspace-content" aria-label="Operator prototype workspace">
@@ -128,6 +135,6 @@
       </section>
     </main>
 
-    <script src="./main.js?v=20260817-static-media1"></script>
+    <script src="./main.js?v=20260818-workspace-reveal1"></script>
   </body>
 </html>
