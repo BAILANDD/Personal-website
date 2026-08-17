@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Lab</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        background: #0b0f1f;
+        color: #eaf0ff;
+      }
+      .wrap {
+        width: min(980px, 92vw);
+        margin: 40px auto;
+      }
+      h1 {
+        margin: 0 0 10px;
+      }
+      p { opacity: 0.8; }
+      .grid {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid #5d6db0;
+        padding: 16px;
+        background: linear-gradient(180deg, #111a35, #0b1021);
+      }
+      a:hover { border-color: #8ab4ff; }
+      strong { display: block; margin-bottom: 8px; }
+      @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Style Lab</h1>
+      <p>点击测试不同网页风格版本。</p>
+      <div class="grid">
+        <a href="./variant-neon-arcade.html"><strong>Variant A</strong>Neon Arcade</a>
+        <a href="./variant-crt-terminal.html"><strong>Variant B</strong>CRT Terminal</a>
+        <a href="./variant-pixel-magazine.html"><strong>Variant C</strong>Pixel Magazine</a>
+      </div>
+      <p style="margin-top:20px"><a href="./index.html" style="display:inline-block;padding:8px 12px">返回主页面</a></p>
+    </div>
+  </body>
+</html>

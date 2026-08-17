@@ -1,0 +1,32 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.log
+
+# Dependencies and package-manager noise
+node_modules/
+.npm/
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Build output and caches
+dist/
+.cache/
+.turbo/
+.vite/
+.parcel-cache/
+
+# Local master video files, not used by production build
+website/assets/videos/
+
+# Local deployment metadata
+.openai/
+
+# Local TouchDesigner/Python experiment output
+td-top-operator-replica/
+td_daily_output/
+touchdesigner_daily_learning.py
+visualize_td_report.py

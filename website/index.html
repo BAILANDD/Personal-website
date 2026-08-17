@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Workspace</title>
+    <meta
+      name="description"
+      content="A minimal portfolio workspace shell with terminal help and an empty works area."
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260817-static-media1" />
+  </head>
+  <body>
+    <main class="home-shell" aria-label="Portfolio workspace shell">
+      <section class="terminal-panel" aria-label="Terminal help">
+        <p
+          class="prompt-line type-line"
+          aria-label="terminal path"
+          data-type-parts='[{"text":"user","accent":true},{"text":"@portfolio:"},{"text":"~","accent":true}]'
+        ></p>
+
+        <div class="boot-sequence" aria-live="polite">
+          <p class="terminal-line type-line" data-type-parts='[{"text":"&gt; booting system..."}]'></p>
+          <p class="terminal-line type-line" data-type-parts='[{"text":"&gt; loading workspace..."}]'></p>
+          <p class="terminal-line type-line" data-type-parts='[{"text":"&gt; connecting operators..."}]'></p>
+          <p class="terminal-line type-line" data-type-parts='[{"text":"&gt; ready."}]'></p>
+        </div>
+
+        <section class="help-block" aria-label="Available commands">
+          <p class="command-line type-line" data-type-parts='[{"text":"$ help","accent":true}]'></p>
+          <p class="available-line type-line" data-type-parts='[{"text":"Available commands:"}]'></p>
+
+          <div class="command-list" role="list" aria-label="Command list">
+            <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"click                   = select"}]'></p>
+            <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"drag                    = pan"}]'></p>
+            <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"i / double clicki       = enter"}]'></p>
+            <p class="command-row type-line" role="listitem" data-type-parts='[{"text":"u                       = out"}]'></p>
+          </div>
+        </section>
+      </section>
+
+      <div class="shell-divider" aria-hidden="true"></div>
+
+      <section class="workspace-panel" aria-label="Workspace shell">
+        <p class="workspace-path type-line" data-type-parts='[{"text":"/works"}]'></p>
+        <div class="workspace-mode-stack">
+          <div class="workspace-content" aria-label="Operator prototype workspace">
+            <div class="operator-layer" id="operator-layer" aria-label="Works operator layer"></div>
+          </div>
+
+          <article class="project-detail" data-project-detail="scomparsa" aria-hidden="true" aria-label="Scomparsa Dell'Infanzia project detail">
+            <div class="project-detail-inner">
+              <header class="detail-header">
+                <h1>Scomparsa Dell'Infanzia</h1>
+                <p class="detail-subtitle">《童年的消逝》</p>
+                <p class="detail-summary">
+                  该作品聚焦儿童在短视频与互联网环境中的认知变化，通过交互视觉与分层信息结构，探讨“童年边界”在现代媒介中的消融过程。
+                </p>
+              </header>
+
+              <figure class="detail-hero">
+                <img src="./assets/thumbs/scomparsa-dell-infanzia.mp4.png" alt="Scomparsa Dell'Infanzia project still" draggable="false" />
+              </figure>
+
+              <p class="detail-video-link-row">
+                <a class="detail-video-link" data-external-video-project="scomparsa">watch project video ↗</a>
+              </p>
+
+              <section class="detail-text-block">
+                <h2>Project Notes</h2>
+                <p>
+                  项目从“信息过载与教育边界”的社会议题出发，结合图像分镜、统计信息与实时视觉语义，构建一个可被观众主动探索的认知场景。
+                </p>
+                <p>
+                  作品强调儿童与成人信息生态错位的问题，把媒介经验、认知压力和观看行为放在同一个交互场域中进行观察。
+                </p>
+              </section>
+
+              <figure class="detail-media-block">
+                <img src="./assets/thumbs/scomparsa-dell-infanzia.mp4.png" alt="Scomparsa Dell'Infanzia preview still" draggable="false" />
+              </figure>
+
+              <section class="detail-meta-block" aria-label="Project metadata">
+                <ul>
+                  <li>Year: 2025</li>
+                  <li>Type: Interactive Project</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+
+          <article class="project-detail" data-project-detail="corallo" aria-hidden="true" aria-label="Energia Del Corallo project detail">
+            <div class="project-detail-inner">
+              <header class="detail-header">
+                <h1>Energia Del Corallo</h1>
+                <p class="detail-summary">
+                  该作品融合 3D 建模、材质设计与叙事构图，围绕珊瑚白化和海洋污染问题，用东方墨画视觉语汇构建一个生态警示场景。
+                </p>
+              </header>
+
+              <figure class="detail-hero">
+                <img src="./assets/thumbs/energia-del-corallo.mp4.png" alt="Energia Del Corallo project still" draggable="false" />
+              </figure>
+
+              <section class="detail-text-block">
+                <h2>Project Notes</h2>
+                <p>
+                  通过对珊瑚、鱼群与海底废弃物的象征化建模，作品强调人类活动与海洋系统之间的脆弱关系。
+                </p>
+                <p>
+                  结构上采用多视角展示与分镜式叙事，让观者在审美体验中建立生态反思。
+                </p>
+              </section>
+
+              <figure class="detail-media-block">
+                <img src="./assets/thumbs/energia-del-corallo.mp4.png" alt="Energia Del Corallo preview still" draggable="false" />
+              </figure>
+
+              <section class="detail-meta-block" aria-label="Project metadata">
+                <ul>
+                  <li>Year: 2025</li>
+                  <li>Type: 3D Project</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js?v=20260817-static-media1"></script>
+  </body>
+</html>

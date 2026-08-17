@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variant C - Pixel Magazine</title>
+    <style>
+      body { margin:0; background:#1a1220; color:#fff5ee; font-family: "Segoe UI", sans-serif; }
+      .bg { position:fixed; inset:0; background:
+        linear-gradient(30deg, rgba(255,162,0,.15), transparent 40%),
+        linear-gradient(-20deg, rgba(233,71,255,.18), transparent 44%),
+        #1a1220; }
+      .wrap { position:relative; width:min(1200px,92vw); margin:34px auto; }
+      .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap:12px; }
+      .panel { border:2px solid #ff7b51; background:#261832; padding:16px; box-shadow:8px 8px 0 #120a17; }
+      h1 { margin:0; font-size: clamp(2.2rem, 6vw, 4rem); color:#ffd15a; }
+      .mini { display:grid; gap:10px; }
+      .badge { background:#ff7b51; color:#1d1028; font-weight:700; padding:5px 8px; display:inline-block; }
+      .cards { margin-top:12px; display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:10px; }
+      .card { border:2px solid #ff7b51; background:#261832; min-height:120px; padding:10px; }
+      a { color:#ffd15a; }
+      @media (max-width:860px){ .hero,.cards{ grid-template-columns:1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="wrap">
+      <div class="hero">
+        <section class="panel">
+          <span class="badge">PIXEL MAGAZINE</span>
+          <h1>YOUR NAME</h1>
+          <p>更 editorial 的像素海报风，适合强调“艺术家个人品牌”的辨识度。</p>
+        </section>
+        <aside class="panel mini"><div>Issue 01</div><div>Issue 02</div><div>Issue 03</div></aside>
+      </div>
+      <div class="cards"><article class="card">WORK A</article><article class="card">WORK B</article><article class="card">WORK C</article></div>
+      <p><a href="./style-lab.html">Back to Style Lab</a></p>
+    </div>
+  </body>
+</html>

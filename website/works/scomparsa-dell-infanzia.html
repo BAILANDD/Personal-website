@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scomparsa Dell'infanzia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+    <style>
+      :root { --bg:#0b0f1e; --bg2:#131933; --line:#5262ad; --cyan:#7feeff; --text:#f1f5ff; --muted:#b4bfdc; --yellow:#ffd84c; }
+      * { box-sizing:border-box; }
+      body { margin:0; background:radial-gradient(circle at 15% 18%, rgba(59,89,201,.22), transparent 23%), radial-gradient(circle at 86% 72%, rgba(39,148,255,.18), transparent 24%), linear-gradient(180deg,var(--bg) 0%,var(--bg2) 44%,#090d1b 100%); color:var(--text); font-family:"VT323", monospace; letter-spacing:.02em; }
+      .wrap { width:min(1200px,92vw); margin:28px auto; border:2px solid var(--line); background:linear-gradient(180deg, rgba(15,22,45,.95), rgba(8,12,25,.95)); box-shadow:6px 6px 0 #02040d; padding:16px; }
+      .back { display:inline-block; text-decoration:none; color:var(--text); border:2px solid var(--line); background:#131c3d; padding:6px 10px; font-family:"Press Start 2P", monospace; font-size:.52rem; }
+      .back:hover { filter:brightness(1.08); }
+      .kicker { margin:14px 0 0; color:var(--cyan); font-family:"Press Start 2P", monospace; font-size:.58rem; }
+      h1 { margin:10px 0 12px; color:var(--yellow); font-family:"Press Start 2P", monospace; font-size:clamp(1.2rem,3.8vw,2.2rem); line-height:1.25; }
+      p { margin:0; font-size:1.5rem; line-height:1.2; color:var(--muted); }
+      .video { display:block; margin-top:14px; width:100%; border:2px solid var(--line); background:#02040d; box-shadow:4px 4px 0 #060b1a; }
+      .meta { margin-top:12px; border:2px solid var(--line); background:#121a38; padding:10px; }
+      .meta h2 { margin:0 0 10px; color:var(--cyan); font-family:"Press Start 2P", monospace; font-size:.62rem; line-height:1.4; }
+      .tags { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+      .tags span { border:2px solid var(--line); background:#1a2550; color:#dbe7ff; padding:4px 8px; font-family:"Press Start 2P", monospace; font-size:.48rem; line-height:1.4; }
+      @media (max-width: 720px) { p { font-size:1.26rem; } }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <a class="back" href="../index.html">← BACK TO ARCHIVE</a>
+      <p class="kicker">INTERACTIVE PROJECT / MEDIA & CHILDHOOD</p>
+      <h1>SCOMPARSA DELL'INFANZIA</h1>
+      <p>
+        该作品聚焦儿童在短视频与互联网环境中的认知变化，通过交互视觉与分层信息结构，探讨“童年边界”在现代媒介中的消融过程。
+      </p>
+
+      <img class="video" src="../assets/thumbs/scomparsa-dell-infanzia.mp4.png" alt="Scomparsa Dell'Infanzia project still" />
+
+      <section class="meta">
+        <h2>PROJECT NOTES</h2>
+        <p>
+          项目从“信息过载与教育边界”的社会议题出发，结合图像分镜、统计信息与实时视觉语义，
+          构建一个可被观众主动探索的认知场景，强调儿童与成人信息生态错位的问题。
+        </p>
+        <div class="tags">
+          <span>TouchDesigner</span>
+          <span>Interactive Narrative</span>
+          <span>Media Critique</span>
+          <span>Childhood Studies</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

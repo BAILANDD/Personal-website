@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variant B - CRT Terminal</title>
+    <style>
+      body { margin:0; background:#031006; color:#b4ffbf; font-family: ui-monospace, monospace; }
+      .scan { position:fixed; inset:0; pointer-events:none; background:repeating-linear-gradient(to bottom, rgba(255,255,255,.05) 0, rgba(255,255,255,.05) 2px, transparent 2px, transparent 4px); }
+      .wrap { width:min(1050px,92vw); margin:30px auto; border:2px solid #2f7c3b; padding:18px; background:#05160a; box-shadow:8px 8px 0 #021006; }
+      h1 { margin:0; font-size:2.2rem; }
+      .line { border-top:1px dashed #2f7c3b; margin:12px 0; }
+      .grid { display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+      .box { border:1px solid #2f7c3b; padding:12px; min-height:120px; }
+      a { color:#7bf790; }
+      @media (max-width:800px){ .grid{ grid-template-columns:1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="scan"></div>
+    <div class="wrap">
+      <h1>VARIANT B / CRT TERMINAL</h1>
+      <div class="line"></div>
+      <p>> 低饱和、强叙事、研究日志感，适合突出“过程档案”和“学习路径”。</p>
+      <div class="grid">
+        <div class="box">[LOG_01] Gesture input mapping</div>
+        <div class="box">[LOG_02] Audio reactive structure</div>
+      </div>
+      <p><a href="./style-lab.html">Back to Style Lab</a></p>
+    </div>
+  </body>
+</html>
