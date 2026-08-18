@@ -3,52 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scomparsa Dell'infanzia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
-    <style>
-      :root { --bg:#0b0f1e; --bg2:#131933; --line:#5262ad; --cyan:#7feeff; --text:#f1f5ff; --muted:#b4bfdc; --yellow:#ffd84c; }
-      * { box-sizing:border-box; }
-      body { margin:0; background:radial-gradient(circle at 15% 18%, rgba(59,89,201,.22), transparent 23%), radial-gradient(circle at 86% 72%, rgba(39,148,255,.18), transparent 24%), linear-gradient(180deg,var(--bg) 0%,var(--bg2) 44%,#090d1b 100%); color:var(--text); font-family:"VT323", monospace; letter-spacing:.02em; }
-      .wrap { width:min(1200px,92vw); margin:28px auto; border:2px solid var(--line); background:linear-gradient(180deg, rgba(15,22,45,.95), rgba(8,12,25,.95)); box-shadow:6px 6px 0 #02040d; padding:16px; }
-      .back { display:inline-block; text-decoration:none; color:var(--text); border:2px solid var(--line); background:#131c3d; padding:6px 10px; font-family:"Press Start 2P", monospace; font-size:.52rem; }
-      .back:hover { filter:brightness(1.08); }
-      .kicker { margin:14px 0 0; color:var(--cyan); font-family:"Press Start 2P", monospace; font-size:.58rem; }
-      h1 { margin:10px 0 12px; color:var(--yellow); font-family:"Press Start 2P", monospace; font-size:clamp(1.2rem,3.8vw,2.2rem); line-height:1.25; }
-      p { margin:0; font-size:1.5rem; line-height:1.2; color:var(--muted); }
-      .video { display:block; margin-top:14px; width:100%; border:2px solid var(--line); background:#02040d; box-shadow:4px 4px 0 #060b1a; }
-      .meta { margin-top:12px; border:2px solid var(--line); background:#121a38; padding:10px; }
-      .meta h2 { margin:0 0 10px; color:var(--cyan); font-family:"Press Start 2P", monospace; font-size:.62rem; line-height:1.4; }
-      .tags { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
-      .tags span { border:2px solid var(--line); background:#1a2550; color:#dbe7ff; padding:4px 8px; font-family:"Press Start 2P", monospace; font-size:.48rem; line-height:1.4; }
-      @media (max-width: 720px) { p { font-size:1.26rem; } }
-    </style>
+    <title>Scomparsa dell'infanzia</title>
+    <link rel="stylesheet" href="../styles.css?v=20260818-scomparsa-detail1" />
   </head>
-  <body>
-    <main class="wrap">
-      <a class="back" href="../index.html">← BACK TO ARCHIVE</a>
-      <p class="kicker">INTERACTIVE PROJECT / MEDIA & CHILDHOOD</p>
-      <h1>SCOMPARSA DELL'INFANZIA</h1>
-      <p>
-        该作品聚焦儿童在短视频与互联网环境中的认知变化，通过交互视觉与分层信息结构，探讨“童年边界”在现代媒介中的消融过程。
-      </p>
+  <body class="standalone-detail-page">
+    <main class="project-detail project-detail--scomparsa project-detail--standalone is-active" aria-label="Scomparsa dell'infanzia project detail">
+      <div class="project-detail-inner">
+        <header class="detail-header">
+          <h1>Scomparsa dell'infanzia</h1>
+          <p class="detail-secondary-title">童年的消逝</p>
+        </header>
 
-      <img class="video" src="../assets/thumbs/scomparsa-dell-infanzia.mp4.png" alt="Scomparsa Dell'Infanzia project still" />
+        <figure class="detail-figure detail-figure--panorama">
+          <img class="detail-image" src="../assets/thumbs/童年的消逝全景.png" alt="Scomparsa dell'infanzia full panorama" draggable="false" />
+        </figure>
 
-      <section class="meta">
-        <h2>PROJECT NOTES</h2>
-        <p>
-          项目从“信息过载与教育边界”的社会议题出发，结合图像分镜、统计信息与实时视觉语义，
-          构建一个可被观众主动探索的认知场景，强调儿童与成人信息生态错位的问题。
+        <p class="detail-video-link-row">
+          <a class="detail-video-link" href="https://www.bilibili.com/video/BV1z38g66EdW?vd_source=1190c9e2723a2aedd2e785749b2e6e56" target="_blank" rel="noopener noreferrer">点击观看作品视频 ↗</a>
         </p>
-        <div class="tags">
-          <span>TouchDesigner</span>
-          <span>Interactive Narrative</span>
-          <span>Media Critique</span>
-          <span>Childhood Studies</span>
-        </div>
-      </section>
+
+        <section class="detail-section detail-section--intro">
+          <h2 class="detail-section-title">Project Introduction</h2>
+          <p class="detail-copy">
+            《童年的消逝》是一件围绕儿童认知、媒介环境与数字图像关系展开的互动装置作品。项目关注当儿童持续接触屏幕、网络图像与数字媒介后，现实经验与虚拟信息之间的边界如何逐渐发生变化。作品通过 TouchDesigner 构建实时视觉系统，将观众的操作转化为图像状态、运动、失真与模糊等视觉变化，使观看者直接参与作品的生成过程。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Background</h2>
+          <figure class="detail-figure detail-figure--wide">
+            <img class="detail-image" src="../assets/thumbs/童年的消逝背景.jpg" alt="Scomparsa dell'infanzia background research" draggable="false" loading="lazy" />
+          </figure>
+          <p class="detail-copy">
+            项目的前期研究围绕儿童成长环境、媒介使用方式与视觉认知展开，并尝试梳理数字媒介进入儿童日常生活之后，对认知方式、信息接收和成长经验所产生的变化。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Media Impact</h2>
+          <div class="detail-grid detail-grid--two">
+            <figure class="detail-figure">
+              <img class="detail-image" src="../assets/thumbs/童年的消逝影响1.jpg" alt="Scomparsa dell'infanzia media impact 1" draggable="false" loading="lazy" />
+            </figure>
+            <figure class="detail-figure">
+              <img class="detail-image" src="../assets/thumbs/童年的消逝影响2.jpg" alt="Scomparsa dell'infanzia media impact 2" draggable="false" loading="lazy" />
+            </figure>
+          </div>
+          <p class="detail-copy">
+            数字媒介已经深度进入儿童的日常生活。屏幕、短视频、游戏与网络信息不断改变儿童获取信息和理解世界的方式，同时也让现实经验与虚拟内容之间的边界变得更加模糊。项目通过前期研究梳理这些变化，并将其转化为后续作品中的视觉与交互线索。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Design Development</h2>
+          <figure class="detail-figure detail-figure--wide">
+            <img class="detail-image" src="../assets/thumbs/童年的消逝设计构思和草稿.jpg" alt="Scomparsa dell'infanzia design development sketches" draggable="false" loading="lazy" />
+          </figure>
+          <p class="detail-copy">
+            设计阶段主要围绕视觉元素、交互方式与空间呈现之间的关系展开。通过草图与系统结构梳理，将儿童、媒介信息、图像干扰与实时生成逐步整合为统一的交互体验。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Interaction Principle</h2>
+          <figure class="detail-figure detail-figure--wide">
+            <img class="detail-image" src="../assets/thumbs/童年的消逝交互原理.jpg" alt="Scomparsa dell'infanzia interaction principle" draggable="false" loading="lazy" />
+          </figure>
+          <p class="detail-copy">
+            作品通过实体控制与 TouchDesigner 实时视觉系统建立互动关系。观众的操作可以改变图像状态、运动速度、失真程度、模糊与视觉效果，使原本固定的影像不断发生变化。最终画面并不是预先播放的单一结果，而是在观众参与过程中持续生成。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Final Installation</h2>
+          <div class="detail-final-flow">
+            <div class="detail-grid detail-grid--two">
+              <figure class="detail-figure">
+                <img class="detail-image" src="../assets/thumbs/童年的消逝局部1.JPG" alt="Scomparsa dell'infanzia final installation detail 1" draggable="false" loading="lazy" />
+              </figure>
+              <figure class="detail-figure">
+                <img class="detail-image" src="../assets/thumbs/童年的消逝局部2.JPG" alt="Scomparsa dell'infanzia final installation detail 2" draggable="false" loading="lazy" />
+              </figure>
+            </div>
+
+            <figure class="detail-figure detail-figure--large">
+              <img class="detail-image" src="../assets/thumbs/童年的消逝局部3.JPG" alt="Scomparsa dell'infanzia final installation detail 3" draggable="false" loading="lazy" />
+            </figure>
+
+            <figure class="detail-figure detail-figure--large">
+              <img class="detail-image" src="../assets/thumbs/童年的消逝局部4.JPG" alt="Scomparsa dell'infanzia final installation detail 4" draggable="false" loading="lazy" />
+            </figure>
+          </div>
+          <p class="detail-copy">
+            最终装置将实时生成的视觉内容、交互设备与空间环境结合，使观众的操作直接成为作品视觉变化的一部分。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Virtual Exhibition</h2>
+          <figure class="detail-figure detail-figure--wide">
+            <img class="detail-image" src="../assets/thumbs/童年的消逝虚拟展览.jpg" alt="Scomparsa dell'infanzia virtual exhibition" draggable="false" loading="lazy" />
+          </figure>
+          <p class="detail-copy">
+            虚拟展览部分进一步模拟作品在展示空间中的观看关系，用于呈现影像尺度、装置位置与观众观看距离之间的空间效果。
+          </p>
+        </section>
+
+        <section class="detail-meta-block" aria-label="Project metadata">
+          <ul>
+            <li>Year: 2025</li>
+            <li>Type: Interactive Project</li>
+          </ul>
+        </section>
+      </div>
     </main>
   </body>
 </html>

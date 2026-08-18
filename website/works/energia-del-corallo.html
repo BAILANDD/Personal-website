@@ -3,133 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Energia Del Corallo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #0b0f1e;
-        --bg-2: #131933;
-        --line: #5262ad;
-        --cyan: #7feeff;
-        --text: #f1f5ff;
-        --muted: #b4bfdc;
-        --yellow: #ffd84c;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        background:
-          radial-gradient(circle at 15% 18%, rgba(59, 89, 201, 0.22), transparent 23%),
-          radial-gradient(circle at 86% 72%, rgba(39, 148, 255, 0.18), transparent 24%),
-          linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 44%, #090d1b 100%);
-        color: var(--text);
-        font-family: "VT323", monospace;
-        letter-spacing: 0.02em;
-      }
-      .wrap {
-        width: min(1200px, 92vw);
-        margin: 28px auto;
-        border: 2px solid var(--line);
-        background: linear-gradient(180deg, rgba(15, 22, 45, 0.95), rgba(8, 12, 25, 0.95));
-        box-shadow: 6px 6px 0 #02040d;
-        padding: 16px;
-      }
-      .back {
-        display: inline-block;
-        text-decoration: none;
-        color: var(--text);
-        border: 2px solid var(--line);
-        background: #131c3d;
-        padding: 6px 10px;
-        font-family: "Press Start 2P", monospace;
-        font-size: 0.52rem;
-      }
-      .back:hover { filter: brightness(1.08); }
-      .kicker {
-        margin: 14px 0 0;
-        color: var(--cyan);
-        font-family: "Press Start 2P", monospace;
-        font-size: 0.58rem;
-      }
-      h1 {
-        margin: 10px 0 12px;
-        color: var(--yellow);
-        font-family: "Press Start 2P", monospace;
-        font-size: clamp(1.2rem, 3.8vw, 2.2rem);
-        line-height: 1.25;
-      }
-      p {
-        margin: 0;
-        font-size: 1.5rem;
-        line-height: 1.2;
-        color: var(--muted);
-      }
-      .video {
-        display: block;
-        margin-top: 14px;
-        width: 100%;
-        border: 2px solid var(--line);
-        background: #02040d;
-        box-shadow: 4px 4px 0 #060b1a;
-      }
-      .meta {
-        margin-top: 12px;
-        border: 2px solid var(--line);
-        background: #121a38;
-        padding: 10px;
-      }
-      .meta h2 {
-        margin: 0 0 10px;
-        color: var(--cyan);
-        font-family: "Press Start 2P", monospace;
-        font-size: 0.62rem;
-        line-height: 1.4;
-      }
-      .tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
-      .tags span {
-        border: 2px solid var(--line);
-        background: #1a2550;
-        color: #dbe7ff;
-        padding: 4px 8px;
-        font-family: "Press Start 2P", monospace;
-        font-size: 0.48rem;
-        line-height: 1.4;
-      }
-      @media (max-width: 720px) {
-        p { font-size: 1.26rem; }
-      }
-    </style>
+    <title>Energia del Corallo</title>
+    <link rel="stylesheet" href="../styles.css?v=20260818-corallo-video-link1" />
   </head>
-  <body>
-    <main class="wrap">
-      <a class="back" href="../index.html">← BACK TO ARCHIVE</a>
-      <p class="kicker">BLENDER PROJECT / ECOLOGY NARRATIVE</p>
-      <h1>ENERGIA DEL CORALLO</h1>
-      <p>
-        该作品融合 3D 建模、材质设计与叙事构图，围绕珊瑚白化和海洋污染问题，
-        用东方墨画视觉语汇构建一个生态警示场景。
-      </p>
+  <body class="standalone-detail-page">
+    <main class="project-detail project-detail--corallo project-detail--standalone is-active" aria-label="Energia del Corallo project detail">
+      <div class="project-detail-inner">
+        <header class="detail-header">
+          <h1>Energia del Corallo</h1>
+          <p class="detail-secondary-title">珊瑚奇韵</p>
+        </header>
 
-      <img class="video" src="../assets/thumbs/energia-del-corallo.mp4.png" alt="Energia Del Corallo project still" />
+        <figure class="detail-figure detail-figure--panorama">
+          <img class="detail-image" src="../assets/thumbs/珊瑚泣韵全景.png" alt="Energia del Corallo full panorama" draggable="false" />
+        </figure>
 
-      <section class="meta">
-        <h2>PROJECT NOTES</h2>
-        <p>
-          通过对珊瑚、鱼群与海底废弃物的象征化建模，作品强调人类活动与海洋系统之间的脆弱关系。
-          结构上采用多视角展示与分镜式叙事，让观者在审美体验中建立生态反思。
+        <p class="detail-video-link-row">
+          <a class="detail-video-link" href="https://www.bilibili.com/video/BV1RTbr6SESr?vd_source=1190c9e2723a2aedd2e785749b2e6e56" target="_blank" rel="noopener noreferrer">点击观看作品视频 ↗</a>
         </p>
-        <div class="tags">
-          <span>Blender</span>
-          <span>3D Modeling</span>
-          <span>Environmental Narrative</span>
-          <span>Ink-inspired Visual Language</span>
-        </div>
-      </section>
+
+        <section class="detail-section detail-section--intro">
+          <h2 class="detail-section-title">Project Introduction</h2>
+          <p class="detail-copy">
+            《珊瑚奇韵》以珊瑚的自然形态与生态意象为视觉出发点，通过 3D 建模、数字绘制与图像合成等方式，将珊瑚的结构、纹理与色彩转化为具有空间感与叙事性的视觉场景。项目尝试在自然形态与数字媒介之间建立新的视觉关系，使珊瑚从现实中的生态对象转化为一种可被重新观看和感知的数字景观。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Background Research</h2>
+          <figure class="detail-figure detail-figure--wide">
+            <img class="detail-image" src="../assets/thumbs/珊瑚泣韵背景调查.jpg" alt="Energia del Corallo background research board" draggable="false" loading="lazy" />
+          </figure>
+          <p class="detail-copy">
+            前期研究从珊瑚的生长结构、形态特征、色彩层次与生态环境展开，通过图像资料与视觉归纳提取可用于后续创作的形态语言，为场景构图、色彩系统与细节设计建立基础。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Research / Context</h2>
+          <figure class="detail-figure detail-figure--wide">
+            <img class="detail-image" src="../assets/thumbs/珊瑚泣韵研究必要性.jpg" alt="Energia del Corallo research context board" draggable="false" loading="lazy" />
+          </figure>
+          <p class="detail-copy">
+            珊瑚既具有高度复杂的自然结构，也承载着脆弱的生态关系。项目希望通过视觉设计重新组织这些信息，使环境议题不只停留在知识层面，而能够转化为更加直观的视觉体验。
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Sketch Development</h2>
+          <div class="detail-grid detail-grid--two">
+            <figure class="detail-figure">
+              <img class="detail-image" src="../assets/thumbs/珊瑚泣韵草图.jpg" alt="Energia del Corallo sketch development 1" draggable="false" loading="lazy" />
+            </figure>
+            <figure class="detail-figure">
+              <img class="detail-image" src="../assets/thumbs/珊瑚泣韵草图2.jpg" alt="Energia del Corallo sketch development 2" draggable="false" loading="lazy" />
+            </figure>
+          </div>
+          <p class="detail-copy">
+            草图阶段主要探索珊瑚主体、环境元素与画面空间之间的关系，通过不同构图与形态组合确定最终场景的视觉重心与层次结构。
+          </p>
+        </section>
+
+        <section class="detail-section detail-section--final">
+          <h2 class="detail-section-title">Final Details</h2>
+          <p class="detail-copy">
+            最终画面通过局部纹理、颜色叠加与空间层次进一步强化珊瑚的有机感。细节既保留自然形态的复杂性，也通过数字处理形成更具幻想感的视觉语言。
+          </p>
+
+          <div class="detail-final-flow">
+            <figure class="detail-figure detail-figure--large">
+              <img class="detail-image" src="../assets/thumbs/珊瑚泣韵局部1.png" alt="Energia del Corallo final detail 1" draggable="false" loading="lazy" />
+            </figure>
+
+            <div class="detail-grid detail-grid--two">
+              <figure class="detail-figure">
+                <img class="detail-image" src="../assets/thumbs/珊瑚泣韵局部2.png" alt="Energia del Corallo final detail 2" draggable="false" loading="lazy" />
+              </figure>
+              <figure class="detail-figure">
+                <img class="detail-image" src="../assets/thumbs/珊瑚泣韵局部3.png" alt="Energia del Corallo final detail 3" draggable="false" loading="lazy" />
+              </figure>
+            </div>
+
+            <figure class="detail-figure detail-figure--large">
+              <img class="detail-image" src="../assets/thumbs/珊瑚泣韵局部4.png" alt="Energia del Corallo final detail 4" draggable="false" loading="lazy" />
+            </figure>
+
+            <div class="detail-grid detail-grid--two">
+              <figure class="detail-figure">
+                <img class="detail-image" src="../assets/thumbs/珊瑚泣韵局部5.png" alt="Energia del Corallo final detail 5" draggable="false" loading="lazy" />
+              </figure>
+              <figure class="detail-figure">
+                <img class="detail-image" src="../assets/thumbs/珊瑚泣韵局部6.png" alt="Energia del Corallo final detail 6" draggable="false" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-meta-block" aria-label="Project metadata">
+          <ul>
+            <li>Year: 2025</li>
+            <li>Type: 3D Project</li>
+          </ul>
+        </section>
+      </div>
     </main>
   </body>
 </html>

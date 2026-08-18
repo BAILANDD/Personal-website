@@ -1,9 +1,11 @@
 const promptLine = document.querySelector(".prompt-line");
 const bootLines = [...document.querySelectorAll(".boot-sequence .type-line")];
 const helpLines = [...document.querySelectorAll(".help-block .type-line")];
+const enterHelpLine = document.querySelector("[data-help-enter]");
 const operatorLayer = document.getElementById("operator-layer");
 const workspacePanel = document.querySelector(".workspace-panel");
 const workspacePath = document.querySelector(".workspace-path");
+const workspaceBackLink = document.querySelector(".workspace-back-link");
 const workspaceContent = document.querySelector(".workspace-content");
 const projectDetails = [...document.querySelectorAll("[data-project-detail]")];
 
@@ -11,6 +13,7 @@ const TYPE_SPEED = 18;
 const LINE_PAUSE = 80;
 const WORKSPACE_REVEAL_MS = 520;
 const DRAG_THRESHOLD = 3;
+const TOUCH_TAP_MOVE_THRESHOLD = 10;
 const WHEEL_ZOOM_THRESHOLD = 40;
 const WORKSPACE_ZOOM_LEVELS = [0.72, 0.82, 0.92, 1, 1.12, 1.25, 1.4];
 const INITIAL_WORKSPACE_ZOOM_INDEX = 0;
@@ -65,6 +68,57 @@ const operators = [
     dynamic: true,
     cookLive: true,
   },
+  {
+    id: "lillit",
+    title: "LIL.LIT",
+    operatorName: "lillit1",
+    thumbnail: "./assets/thumbs/lillit封面.jpg",
+    externalVideoUrl: null,
+    detailPath: "/works/lillit1",
+    x: 688,
+    y: 70,
+    hasInput: true,
+    selected: false,
+    viewerOn: true,
+    locked: false,
+    viewerActive: false,
+    dynamic: false,
+    cookLive: false,
+  },
+  {
+    id: "mengyouji",
+    title: "钟秀梦游记",
+    operatorName: "mengyouji1",
+    thumbnail: "./assets/thumbs/梦游记封面.jpg",
+    externalVideoUrl: null,
+    detailPath: "/works/mengyouji1",
+    x: 986,
+    y: 78,
+    hasInput: true,
+    selected: false,
+    viewerOn: true,
+    locked: false,
+    viewerActive: false,
+    dynamic: false,
+    cookLive: false,
+  },
+  {
+    id: "suicidio",
+    title: "SUICIDIO",
+    operatorName: "suicidio1",
+    thumbnail: "./assets/thumbs/suicidio封面.png",
+    externalVideoUrl: "https://www.bilibili.com/video/BV18Q8u6WEPr?vd_source=1190c9e2723a2aedd2e785749b2e6e56",
+    detailPath: "/works/suicidio",
+    x: 1048,
+    y: 302,
+    hasInput: true,
+    selected: false,
+    viewerOn: true,
+    locked: false,
+    viewerActive: false,
+    dynamic: false,
+    cookLive: false,
+  },
 ];
 
 const connections = [
@@ -72,6 +126,21 @@ const connections = [
     id: "scomparsa-corallo",
     from: "scomparsa",
     to: "corallo",
+  },
+  {
+    id: "corallo-lillit",
+    from: "corallo",
+    to: "lillit",
+  },
+  {
+    id: "lillit-mengyouji",
+    from: "lillit",
+    to: "mengyouji",
+  },
+  {
+    id: "mengyouji-suicidio",
+    from: "mengyouji",
+    to: "suicidio",
   },
 ];
 
@@ -151,6 +220,16 @@ function renderLines(lines) {
   lines.forEach((line) => {
     renderTypedParts(line, getParts(line), Infinity);
   });
+}
+
+function isTouchInputDevice() {
+  return navigator.maxTouchPoints > 0 || window.matchMedia("(pointer: coarse)").matches;
+}
+
+function configureInputHelp() {
+  if (!enterHelpLine || !isTouchInputDevice()) return;
+
+  enterHelpLine.dataset.typeParts = '[{"text":"tap again               = enter"}]';
 }
 
 async function revealWorkspace(reducedMotion) {
@@ -260,6 +339,12 @@ function setWorkspacePath(value) {
 
   workspacePath.classList.remove("is-typing");
   workspacePath.textContent = value;
+}
+
+function setWorkspaceBackVisible(visible) {
+  if (!workspaceBackLink) return;
+
+  workspaceBackLink.hidden = !visible;
 }
 
 function captureWorkspaceState() {
@@ -500,6 +585,7 @@ function enterProjectDetail(operator, trigger = "keyboard") {
   workspacePanel.classList.add("is-detail", "is-detail-transitioning");
   workspacePanel.dataset.detailTrigger = trigger;
   workspaceContent?.setAttribute("aria-hidden", "true");
+  setWorkspaceBackVisible(true);
   setActiveProjectDetail(detail);
 
   window.setTimeout(() => {
@@ -516,6 +602,7 @@ function exitProjectDetail() {
   workspacePanel.classList.remove("is-detail", "is-detail-transitioning");
   delete workspacePanel.dataset.detailTrigger;
   workspaceContent?.setAttribute("aria-hidden", "false");
+  setWorkspaceBackVisible(false);
   setActiveProjectDetail(null);
   setWorkspacePath("/works");
   restoreWorkspaceState(workspaceSnapshot);
@@ -553,6 +640,11 @@ function handleKeyboardShortcuts(event) {
     exitProjectDetail();
   }
 }
+
+workspaceBackLink?.addEventListener("click", (event) => {
+  event.preventDefault();
+  exitProjectDetail();
+});
 
 function selectOperator(id) {
   resetDetailEnterWheel();
@@ -621,7 +713,7 @@ function enterOperatorFromDoubleClick(operator, wrapper, event) {
   event.preventDefault();
   event.stopPropagation();
 
-  if (mode !== "workspace" || event.target.closest("[data-no-drag]") || !isInsidePreviewArea(wrapper, event)) return;
+  if (mode !== "workspace" || event.target.closest("[data-no-drag]")) return;
 
   if (wrapper.dataset.suppressClick === "true") {
     wrapper.dataset.suppressClick = "false";
@@ -731,14 +823,26 @@ function handleWorkspaceWheel(event) {
 function endOperatorDrag(event) {
   if (!activeDrag || event.pointerId !== activeDrag.pointerId) return;
 
-  const { captureElement, wrapper, moved } = activeDrag;
+  const { captureElement, operator, pointerType, wrapper, moved, wasSelectedAtStart } = activeDrag;
+  const isTouchTap = event.type === "pointerup" && pointerType === "touch" && !moved;
 
   wrapper.classList.remove("is-dragging");
   captureElement.releasePointerCapture?.(event.pointerId);
 
-  if (moved) {
+  if (moved || isTouchTap) {
     wrapper.dataset.suppressClick = "true";
-    suppressNextLayerClick = true;
+
+    if (moved) {
+      suppressNextLayerClick = true;
+    }
+  }
+
+  if (isTouchTap && mode === "workspace") {
+    if (wasSelectedAtStart) {
+      enterProjectDetail(operator, "touch-tap");
+    } else {
+      selectOperator(operator.id);
+    }
   }
 
   captureElement.removeEventListener("pointermove", moveOperatorDrag);
@@ -770,11 +874,13 @@ function moveOperatorDrag(event) {
 
   const dx = event.clientX - activeDrag.startClientX;
   const dy = event.clientY - activeDrag.startClientY;
+  const distance = Math.hypot(dx, dy);
 
-  if (Math.abs(dx) > DRAG_THRESHOLD || Math.abs(dy) > DRAG_THRESHOLD) {
+  if (distance > activeDrag.dragThreshold) {
     activeDrag.moved = true;
   }
 
+  if (activeDrag.pointerType === "touch" && !activeDrag.moved) return;
   if (activeDrag.locked) return;
 
   setOperatorPosition(activeDrag.operator, activeDrag.wrapper, activeDrag.startX + dx, activeDrag.startY + dy);
@@ -807,6 +913,8 @@ function beginOperatorDrag(operator, wrapper, event) {
   if (event.button !== 0 || event.target.closest("[data-no-drag]")) return;
 
   const captureElement = event.currentTarget;
+  const pointerType = event.pointerType || "mouse";
+  const wasSelectedAtStart = operator.selected;
 
   event.stopPropagation();
   selectOperator(operator.id);
@@ -821,6 +929,9 @@ function beginOperatorDrag(operator, wrapper, event) {
     startX: operator.x,
     startY: operator.y,
     locked: operator.locked,
+    pointerType,
+    dragThreshold: pointerType === "touch" ? TOUCH_TAP_MOVE_THRESHOLD : DRAG_THRESHOLD,
+    wasSelectedAtStart,
     moved: false,
   };
 
@@ -1032,4 +1143,5 @@ function initOperators() {
 
 initOperators();
 syncExternalVideoLinks();
+configureInputHelp();
 bootTerminal();
