@@ -635,7 +635,8 @@ button.viewer-active-cell {
 .project-detail--scomparsa .project-detail-inner,
 .project-detail--lillit .project-detail-inner,
 .project-detail--mengyouji .project-detail-inner,
-.project-detail--suicidio .project-detail-inner {
+.project-detail--suicidio .project-detail-inner,
+.project-detail--laststop .project-detail-inner {
   width: min(1040px, calc(100% - 72px));
 }
 

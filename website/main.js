@@ -119,6 +119,23 @@ const operators = [
     dynamic: false,
     cookLive: false,
   },
+  {
+    id: "laststop",
+    title: "LAST STOP",
+    operatorName: "laststop1",
+    thumbnail: "./assets/thumbs/Laststop封面.png",
+    externalVideoUrl: "https://www.bilibili.com/video/BV1Lf896tEdZ?vd_source=1190c9e2723a2aedd2e785749b2e6e56",
+    detailPath: "/works/laststop1",
+    x: 1048,
+    y: 526,
+    hasInput: true,
+    selected: false,
+    viewerOn: true,
+    locked: false,
+    viewerActive: false,
+    dynamic: false,
+    cookLive: false,
+  },
 ];
 
 const connections = [
@@ -141,6 +158,11 @@ const connections = [
     id: "mengyouji-suicidio",
     from: "mengyouji",
     to: "suicidio",
+  },
+  {
+    id: "suicidio-laststop",
+    from: "suicidio",
+    to: "laststop",
   },
 ];
 
