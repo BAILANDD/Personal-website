@@ -73,7 +73,7 @@ const operators = [
     title: "LIL.LIT",
     operatorName: "lillit1",
     thumbnail: "./assets/thumbs/lillit封面.jpg",
-    externalVideoUrl: null,
+    externalVideoUrl: "https://www.bilibili.com/video/BV1iy4463EEm?vd_source=1190c9e2723a2aedd2e785749b2e6e56",
     detailPath: "/works/lillit1",
     x: 688,
     y: 70,
@@ -136,6 +136,23 @@ const operators = [
     dynamic: false,
     cookLive: false,
   },
+  {
+    id: "tastoid",
+    title: "TASTOID",
+    operatorName: "TASTOID",
+    thumbnail: "./assets/tastoid/updated/thumbnail.webp",
+    externalVideoUrl: null,
+    detailPath: "/works/tastoid",
+    x: 1048,
+    y: 750,
+    hasInput: true,
+    selected: false,
+    viewerOn: true,
+    locked: false,
+    viewerActive: false,
+    dynamic: false,
+    cookLive: false,
+  },
 ];
 
 const connections = [
@@ -164,6 +181,11 @@ const connections = [
     from: "suicidio",
     to: "laststop",
   },
+  {
+    id: "laststop-tastoid",
+    from: "laststop",
+    to: "tastoid",
+  },
 ];
 
 let activeDrag = null;
@@ -177,6 +199,8 @@ let workspaceWheelDelta = 0;
 let detailEnterWheelDelta = 0;
 let networkGridOriginX = 0;
 let networkGridOriginY = 0;
+let homeView = null;
+let spatialWorkspace = null;
 
 function sleep(ms) {
   return new Promise((resolve) => window.setTimeout(resolve, ms));
@@ -498,6 +522,7 @@ function renderOperatorState(operator) {
   const viewerActiveButton = element.querySelector('[data-flag-action="viewer-active"]');
 
   element.classList.toggle("is-current", operator.selected);
+  wrapper?.classList.toggle("is-selected", operator.selected);
   element.classList.toggle("is-viewer-active", operator.viewerActive);
   wrapper?.classList.toggle("is-locked", operator.locked);
 
@@ -575,6 +600,7 @@ function renderConnections() {
 }
 
 function setWorkspaceInteractionEnabled(enabled) {
+  if (spatialWorkspace) return;
   if (!operatorLayer || workspaceInteractionEnabled === enabled) return;
 
   if (enabled) {
@@ -596,11 +622,12 @@ function enterProjectDetail(operator, trigger = "keyboard") {
   if (mode !== "workspace" || !operator?.detailPath || !workspacePanel || !detail) return;
 
   mode = "project-detail";
+  spatialWorkspace?.suspend();
   workspaceSnapshot = captureWorkspaceState();
   resetDetailEnterWheel();
 
   const wrapper = getOperatorWrapper(operator.id);
-  wrapper?.classList.add("is-entering-detail");
+  if (!spatialWorkspace) wrapper?.classList.add("is-entering-detail");
 
   setWorkspaceInteractionEnabled(false);
   setWorkspacePath(operator.detailPath);
@@ -627,7 +654,8 @@ function exitProjectDetail() {
   setWorkspaceBackVisible(false);
   setActiveProjectDetail(null);
   setWorkspacePath("/works");
-  restoreWorkspaceState(workspaceSnapshot);
+  if (spatialWorkspace) spatialWorkspace.resume();
+  else restoreWorkspaceState(workspaceSnapshot);
   setWorkspaceInteractionEnabled(true);
 }
 
@@ -646,8 +674,24 @@ function maybeEnterSelectedDetailFromScroll() {
 
 function handleKeyboardShortcuts(event) {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
+  if (event.target.closest?.('input, textarea, select, [contenteditable="true"]')) return;
 
   const key = event.key.toLowerCase();
+  if (spatialWorkspace && mode === "workspace") {
+    if (key === "h") { event.preventDefault(); spatialWorkspace.reset(); }
+    if (key === "r") { event.preventDefault(); spatialWorkspace.refresh(); }
+    if (key === "escape") { event.preventDefault(); spatialWorkspace.back(); }
+    return;
+  }
+
+  if (mode === "workspace" && key === "h" && !activeDrag && !activePan) {
+    event.preventDefault();
+    restoreWorkspaceState(homeView);
+    workspaceWheelDelta = 0;
+    resetDetailEnterWheel();
+    suppressNextLayerClick = false;
+    setWorkspacePath("/works");
+  }
 
   if (mode === "workspace" && key === "i") {
     const selectedOperator = getSelectedDetailOperator();
@@ -749,15 +793,10 @@ function enterOperatorFromDoubleClick(operator, wrapper, event) {
 function setOperatorPosition(operator, wrapper, x, y) {
   if (!operatorLayer) return;
 
-  const maxX = Math.max(0, operatorLayer.clientWidth - wrapper.offsetWidth);
-  const maxY = Math.max(0, operatorLayer.clientHeight - wrapper.offsetHeight);
-  const nextX = clamp(x, 0, maxX);
-  const nextY = clamp(y, 0, maxY);
-
-  operator.x = nextX;
-  operator.y = nextY;
-  wrapper.style.left = `${nextX}px`;
-  wrapper.style.top = `${nextY}px`;
+  operator.x = x;
+  operator.y = y;
+  wrapper.style.left = `${x}px`;
+  wrapper.style.top = `${y}px`;
   renderConnections();
 }
 
@@ -1013,9 +1052,11 @@ function renderInputPort(operator) {
   `;
 }
 
-function createTopOperator(operator) {
+function createTopOperator(operator, spatial = false) {
   const wrapper = document.createElement("div");
   wrapper.className = `workspace-operator${operator.hasInput ? " has-input" : ""}`;
+  wrapper.dataset.depth = ["corallo", "lillit"].includes(operator.id) ? "back" :
+    ["suicidio", "tastoid"].includes(operator.id) ? "front" : "middle";
   wrapper.style.left = `${operator.x}px`;
   wrapper.style.top = `${operator.y}px`;
 
@@ -1068,7 +1109,7 @@ function createTopOperator(operator) {
     </article>
   `;
 
-  bindOperatorEvents(wrapper, operator);
+  if (!spatial) bindOperatorEvents(wrapper, operator);
   renderOperatorState(operator);
 
   return wrapper;
@@ -1153,6 +1194,7 @@ function initOperators() {
   });
 
   operatorLayer.replaceChildren(fragment);
+  layoutInitialOperators();
   syncNetworkGrid();
   setWorkspaceInteractionEnabled(true);
   document.addEventListener("keydown", handleKeyboardShortcuts);
@@ -1163,7 +1205,74 @@ function initOperators() {
   renderConnections();
 }
 
-initOperators();
-syncExternalVideoLinks();
-configureInputHelp();
-bootTerminal();
+function layoutInitialOperators() {
+  const width = operatorLayer.clientWidth;
+  const first = getOperatorWrapper(operators[0].id);
+  if (!first) return;
+  const nodeWidth = first.offsetWidth;
+  // Reference positions measured relative to one node width; preserve the arrangement on narrow screens.
+  const unit = Math.max(nodeWidth, (width - 24) / 4.35);
+  const positions = {
+    scomparsa: [0, 0],
+    corallo: [1.23, 0.17],
+    lillit: [2.76, 0.22],
+    mengyouji: [0.40, 1.00],
+    suicidio: [1.55, 1.86],
+    laststop: [2.57, 1.02],
+    tastoid: [3.00, 2.03],
+  };
+  operators.forEach((operator) => {
+    const position = positions[operator.id];
+    if (!position) return;
+    operator.x = 8 + position[0] * unit;
+    operator.y = 8 + position[1] * unit;
+    const wrapper = getOperatorWrapper(operator.id);
+    wrapper.style.left = `${operator.x}px`;
+    wrapper.style.top = `${operator.y}px`;
+  });
+}
+
+async function startWorkspace() {
+  try {
+    const { createSpatialWorkspace } = window.PortfolioSpatial;
+    spatialWorkspace = createSpatialWorkspace({
+      host: operatorLayer, operators, connections,
+      createNode: (operator) => createTopOperator(operator, true),
+      getDetail: getProjectDetail,
+      select: selectOperator,
+      open: (operator) => enterProjectDetail(operator, 'spatial-open'),
+      flag: (operator, action, event) => ({ viewer: toggleViewer, lock: toggleLock, cook: toggleCook, 'viewer-active': toggleViewerActive })[action]?.(operator, event),
+    });
+    document.addEventListener('keydown', handleKeyboardShortcuts);
+    operators.forEach(renderOperatorState);
+    workspaceBackLink.textContent = '← BACK TO SPACE';
+    const refreshHelp = document.createElement('p');
+    refreshHelp.className = 'command-row type-line';
+    refreshHelp.setAttribute('role', 'listitem');
+    refreshHelp.dataset.typeParts = JSON.stringify([{ text: 'r                       = refresh' }]);
+    document.querySelector('.command-list').append(refreshHelp);
+    const spatialHelp                = ['click              = focus', 'drag / middle drag = orbit / pan', 'wheel              = zoom', 'u / esc            = out', 'h                  = home', 'r                  = refresh'];
+    document.querySelectorAll('.command-list .command-row').forEach((line, index) => {
+      line.dataset.typeParts = JSON.stringify([{ text: spatialHelp[index] }]);
+    });
+    bootTerminal().then(() => renderTypedParts(refreshHelp, getParts(refreshHelp), Infinity));
+  } catch (error) {
+    console.warn('3D workspace unavailable; using accessible project list.', error);
+    initOperators();
+    homeView = captureWorkspaceState();
+    const list = document.createElement('nav');
+    list.className = 'spatial-fallback';
+    list.setAttribute('aria-label', 'Projects');
+    operators.forEach((operator) => {
+      const button = document.createElement('button');
+      button.textContent = operator.title;
+      button.addEventListener('click', () => { selectOperator(operator.id); enterProjectDetail(operator); });
+      list.append(button);
+    });
+    workspacePanel.append(list);
+    configureInputHelp();
+    bootTerminal();
+  }
+  syncExternalVideoLinks();
+}
+startWorkspace();

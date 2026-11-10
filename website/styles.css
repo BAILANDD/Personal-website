@@ -12,7 +12,7 @@
   --path: #f1f1f1;
   --accent: #7bf47d;
   --divider: #333333;
-  --left-column: clamp(440px, 28.65vw, 550px);
+  --left-column: clamp(290px, 18vw, 345px);
   --divider-width: 2px;
   --shell-font-size: clamp(14px, 0.94vw, 18px);
   --workspace-font-size: 14px;
@@ -206,7 +206,7 @@ dl {
   background: transparent;
   color: rgb(168 168 170);
   font: inherit;
-  font-size: var(--workspace-font-size);
+  font-size: 12px;
   line-height: var(--shell-line-height);
   letter-spacing: 0;
   text-align: right;
@@ -352,8 +352,44 @@ dl {
   cursor: grab;
 }
 
-.workspace-operator.is-dragging {
+.workspace-operator[data-depth] {
+  transition: filter 180ms ease;
+}
+
+.workspace-operator[data-depth="back"] {
+  z-index: 2;
+  filter: brightness(.92);
+}
+
+.workspace-operator[data-depth="middle"] {
+  z-index: 3;
+}
+
+.workspace-operator[data-depth="front"] {
   z-index: 4;
+  filter: drop-shadow(0 5px 5px rgb(0 0 0 / .45));
+}
+
+.workspace-operator.is-selected {
+  z-index: 6;
+  filter: brightness(1.04) drop-shadow(0 7px 6px rgb(0 0 0 / .5));
+}
+
+.workspace-operator.is-dragging {
+  z-index: 7;
+}
+
+@media (hover: hover) {
+  .workspace-operator[data-depth]:hover {
+    z-index: 5;
+    filter: brightness(1.02);
+  }
+  .workspace-operator.is-selected:hover { z-index: 6; }
+  .workspace-operator.is-dragging:hover { z-index: 7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workspace-operator[data-depth] { transition: none; }
 }
 
 .workspace-operator.is-dragging .top-operator {
@@ -636,7 +672,8 @@ button.viewer-active-cell {
 .project-detail--lillit .project-detail-inner,
 .project-detail--mengyouji .project-detail-inner,
 .project-detail--suicidio .project-detail-inner,
-.project-detail--laststop .project-detail-inner {
+.project-detail--laststop .project-detail-inner,
+.project-detail--tastoid .project-detail-inner {
   width: min(1040px, calc(100% - 72px));
 }
 
@@ -895,7 +932,7 @@ button.viewer-active-cell {
 
 @media (max-width: 1280px) {
   :root {
-    --left-column: clamp(360px, 31vw, 440px);
+    --left-column: 290px;
     --left-top-pad: clamp(28px, 4.6vw, 44px);
     --left-pad: clamp(32px, 5vw, 56px);
     --right-pad-left: clamp(32px, 4.5vw, 46px);
@@ -947,6 +984,7 @@ button.viewer-active-cell {
   .project-detail--lillit .project-detail-inner,
   .project-detail--mengyouji .project-detail-inner,
   .project-detail--suicidio .project-detail-inner,
+  .project-detail--tastoid .project-detail-inner,
   .project-detail--standalone .project-detail-inner {
     width: 100%;
   }

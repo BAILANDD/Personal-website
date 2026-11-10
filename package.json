@@ -4,10 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-static.mjs",
+    "build": "node scripts/prepare-three.mjs && node scripts/build-static.mjs",
     "preview": "python3 -m http.server 4173 --directory dist"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
   }
 }
