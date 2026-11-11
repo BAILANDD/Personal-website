@@ -24,13 +24,13 @@ const DETAIL_TRANSITION_MS = 380;
 const MOCK_EXTERNAL_VIDEO_URL = "#";
 
 const TOP_OPERATOR_ICONS = {
-  viewerOn: "./assets/td-native/viewer-on.png",
-  viewerOff: "./assets/td-native/viewer-off.png",
-  cloneImmuneOff: "./assets/td-native/clone-immune-off.png",
-  unlocked: "./assets/td-native/unlocked.png",
-  locked: "./assets/td-native/locked.png",
-  activateOff: "./assets/td-native/activate-off.png",
-  activateOn: "./assets/td-native/activate-on.png",
+  viewerOn: "./assets/td-native/viewer-on.webp",
+  viewerOff: "./assets/td-native/viewer-off.webp",
+  cloneImmuneOff: "./assets/td-native/clone-immune-off.webp",
+  unlocked: "./assets/td-native/unlocked.webp",
+  locked: "./assets/td-native/locked.webp",
+  activateOff: "./assets/td-native/activate-off.webp",
+  activateOn: "./assets/td-native/activate-on.webp",
 };
 
 const operators = [
@@ -38,7 +38,7 @@ const operators = [
     id: "scomparsa",
     title: "Scomparsa Dell'Infanzia",
     operatorName: "scomparsa1",
-    thumbnail: "./assets/thumbs/scomparsa-dell-infanzia.mp4.png",
+    thumbnail: "./assets/thumbs/scomparsa-dell-infanzia.mp4.webp",
     externalVideoUrl: MOCK_EXTERNAL_VIDEO_URL,
     detailPath: "/works/scomparsa1",
     x: 92,
@@ -55,7 +55,7 @@ const operators = [
     id: "corallo",
     title: "Energia Del Corallo",
     operatorName: "corallo1",
-    thumbnail: "./assets/thumbs/energia-del-corallo.mp4.png",
+    thumbnail: "./assets/thumbs/energia-del-corallo.mp4.webp",
     externalVideoUrl: null,
     detailPath: "/works/corallo1",
     x: 390,
@@ -106,7 +106,7 @@ const operators = [
     id: "suicidio",
     title: "SUICIDIO",
     operatorName: "suicidio1",
-    thumbnail: "./assets/thumbs/suicidio封面.png",
+    thumbnail: "./assets/thumbs/suicidio封面.webp",
     externalVideoUrl: "https://www.bilibili.com/video/BV18Q8u6WEPr?vd_source=1190c9e2723a2aedd2e785749b2e6e56",
     detailPath: "/works/suicidio",
     x: 1048,
@@ -123,7 +123,7 @@ const operators = [
     id: "laststop",
     title: "LAST STOP",
     operatorName: "laststop1",
-    thumbnail: "./assets/thumbs/Laststop封面.png",
+    thumbnail: "./assets/thumbs/Laststop封面.webp",
     externalVideoUrl: "https://www.bilibili.com/video/BV1Lf896tEdZ?vd_source=1190c9e2723a2aedd2e785749b2e6e56",
     detailPath: "/works/laststop1",
     x: 1048,
