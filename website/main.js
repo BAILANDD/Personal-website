@@ -141,7 +141,7 @@ const operators = [
     title: "TASTOID",
     operatorName: "TASTOID",
     thumbnail: "./assets/tastoid/updated/thumbnail.webp",
-    externalVideoUrl: null,
+    externalVideoUrl: "https://www.bilibili.com/video/BV1BWsP66EzG?vd_source=1190c9e2723a2aedd2e785749b2e6e56",
     detailPath: "/works/tastoid",
     x: 1048,
     y: 750,
