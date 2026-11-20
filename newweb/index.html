@@ -2,18 +2,21 @@
 <html lang="zh-CN">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zhuanz · Personal Space</title><meta name="description" content="Welcome to Zhuanz's personal space — work, process and playful experiments."><link rel="preload" as="image" href="assets/desktop-lawn.webp" fetchpriority="high" data-layer="scene">
 <link rel="preload" as="image" href="assets/天空.webp" fetchpriority="high" data-layer="sky">
+<style>.desktop-aligning .desktop { visibility: hidden; }</style>
 <script>
+  document.documentElement.classList.add('desktop-aligning');
   const homeUrl = new URL(location.href);
   const hasPhotographyMarker = homeUrl.hash === '#from-photography' ||
     homeUrl.searchParams.get('from') === 'photography';
-  const returningFromPhotography = hasPhotographyMarker ||
-    (document.referrer && new URL(document.referrer).pathname.endsWith('/photography.html'));
+  const navigation = performance.getEntriesByType('navigation')[0]?.type;
+  const returningFromPhotography = navigation !== 'reload' && (hasPhotographyMarker ||
+    (document.referrer && new URL(document.referrer).pathname.endsWith('/photography.html')));
   if (hasPhotographyMarker) {
     homeUrl.searchParams.delete('from');
     if (homeUrl.hash === '#from-photography') homeUrl.hash = '';
     history.replaceState(history.state, '', homeUrl);
   }
-  if (!returningFromPhotography && !location.hash && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward') {
+  if (!returningFromPhotography && !homeUrl.hash && navigation !== 'back_forward') {
     document.documentElement.classList.add('booting');
     setTimeout(() => document.documentElement.classList.remove('booting', 'revealing'), 10000);
   }
@@ -64,10 +67,10 @@
 </div>
 </main>
 <script src="scene-geometry.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=desktop-layout"></script>
 <script src="boot.js"></script>
 <script src="portal-tunnel.js" defer></script>
-<script src="portal-transition.js" defer></script>
+<script src="portal-transition.js?v=gallery-ready" defer></script>
 <script src="projects.js"></script>
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/Flip.min.js"></script>

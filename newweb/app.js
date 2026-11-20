@@ -55,6 +55,7 @@ function alignScreen() {
 }
 new ResizeObserver(alignScreen).observe(desktop);
 alignScreen();
+document.documentElement.classList.remove('desktop-aligning');
 
 // Drag windows by their title bars and the star directly.
 const movableWindows = [];

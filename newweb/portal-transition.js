@@ -9,6 +9,7 @@
     trip.zoom?.cancel();
     trip.overlay.remove();
     trip.gallery.remove();
+    window.removeEventListener('message', trip.onGalleryReady);
     trip.glow.remove();
     document.documentElement.classList.remove('portal-in-transit');
     trip = undefined;
@@ -45,27 +46,34 @@
         return;
       }
       const destination = new URL(link.getAttribute('href'), location.href);
+      const galleryOrigin = destination.protocol === 'file:' ? 'null' : destination.origin;
       const gallery = document.createElement('iframe');
       gallery.className = 'portal-gallery';
       gallery.title = 'Photography';
       gallery.setAttribute('aria-hidden', 'true');
       gallery.tabIndex = -1;
       let galleryReady = false;
-      gallery.addEventListener('load', () => { galleryReady = true; }, {once: true});
-      gallery.src = destination.href;
+      function onGalleryReady(event) {
+        if (event.source === gallery.contentWindow && event.origin === galleryOrigin &&
+            event.data === 'photography-ready') galleryReady = true;
+      }
+      window.addEventListener('message', onGalleryReady);
+      const previewUrl = new URL(destination);
+      previewUrl.searchParams.set('preview', 'portal');
+      gallery.src = previewUrl.href;
       document.body.append(gallery, overlay, glow);
       overlay.append(vault);
       document.documentElement.classList.add('portal-in-transit');
 
       const flightDuration = 2670;
       const exitDuration = 1000;
-      const maxGalleryWait = 1200;
+      const maxGalleryWait = 6500;
       const revealDuration = 1120;
       const zoom = desktop.animate([
         {transform: 'scale(1)', transformOrigin: origin},
         {transform: 'scale(2.1)', transformOrigin: origin}
       ], {duration: revealDuration, easing: 'ease-in', fill: 'forwards'});
-      const current = trip = {overlay, glow, zoom, gallery};
+      const current = trip = {overlay, glow, zoom, gallery, onGalleryReady};
       const start = performance.now();
       let exitStart;
       function frame(now) {

@@ -22,4 +22,7 @@
  viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close();});
  viewer.addEventListener('close',()=>lastTrigger?.focus());
  window.addEventListener('popstate',()=>{if(viewer.open)viewer.close();render();});render();
+ if (window.parent !== window) {
+  requestAnimationFrame(() => window.parent.postMessage('photography-ready', location.protocol === 'file:' ? '*' : location.origin));
+ }
 })();
