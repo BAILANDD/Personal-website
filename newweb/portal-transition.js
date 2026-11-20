@@ -57,8 +57,9 @@
       overlay.append(vault);
       document.documentElement.classList.add('portal-in-transit');
 
-      const duration = 3150;
-      const exitDuration = 480;
+      const flightDuration = 2670;
+      const exitDuration = 1000;
+      const maxGalleryWait = 1200;
       const revealDuration = 1120;
       const zoom = desktop.animate([
         {transform: 'scale(1)', transformOrigin: origin},
@@ -66,10 +67,11 @@
       ], {duration: revealDuration, easing: 'ease-in', fill: 'forwards'});
       const current = trip = {overlay, glow, zoom, gallery};
       const start = performance.now();
+      let exitStart;
       function frame(now) {
         if (trip !== current) return;
         const elapsed = now - start;
-        const progress = Math.min(1, elapsed / duration);
+        const progress = Math.min(1, elapsed / (flightDuration + exitDuration));
         const reveal = Math.min(1, elapsed / revealDuration);
         const spread = reveal * reveal * (3 - 2 * reveal);
         const cx = x + (innerWidth / 2 - x) * spread;
@@ -80,13 +82,17 @@
         Object.assign(glow.style, {left: cx+'px', top: cy+'px', width: size*2+'px', height: size*2+'px'});
         paintVault(progress);
         vault.style.filter = `brightness(${1 + Math.max(0, progress - .87) * 2.2})`;
-        if (galleryReady) {
-          const exit = Math.min(1, Math.max(0, (elapsed - (duration - exitDuration)) / exitDuration));
+        if (galleryReady && elapsed >= flightDuration) {
+          exitStart ??= now;
+          const exit = Math.min(1, (now - exitStart) / exitDuration);
           const fade = exit * exit * (3 - 2 * exit);
-          gallery.style.visibility = exit > 0 ? 'visible' : 'hidden';
+          gallery.style.visibility = 'visible';
           overlay.style.opacity = 1 - fade;
-        }
-        if (progress >= 1) {
+          if (exit === 1) {
+            location.assign(destination.href);
+            return;
+          }
+        } else if (elapsed >= flightDuration + maxGalleryWait) {
           location.assign(destination.href);
           return;
         }

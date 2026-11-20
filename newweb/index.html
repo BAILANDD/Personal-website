@@ -4,9 +4,13 @@
 <link rel="preload" as="image" href="assets/天空.webp" fetchpriority="high" data-layer="sky">
 <script>
   const homeUrl = new URL(location.href);
-  const returningFromPhotography = homeUrl.searchParams.get('from') === 'photography';
-  if (returningFromPhotography) {
+  const hasPhotographyMarker = homeUrl.hash === '#from-photography' ||
+    homeUrl.searchParams.get('from') === 'photography';
+  const returningFromPhotography = hasPhotographyMarker ||
+    (document.referrer && new URL(document.referrer).pathname.endsWith('/photography.html'));
+  if (hasPhotographyMarker) {
     homeUrl.searchParams.delete('from');
+    if (homeUrl.hash === '#from-photography') homeUrl.hash = '';
     history.replaceState(history.state, '', homeUrl);
   }
   if (!returningFromPhotography && !location.hash && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward') {
