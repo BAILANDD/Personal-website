@@ -35,6 +35,8 @@ const desktop = document.querySelector('.desktop');
 function alignScreen() {
   const width = desktop.clientWidth, height = desktop.clientHeight;
   const {scale,offsetX,offsetY,arch}=sceneGeometry(width,height);
+  const scene = {left:offsetX, top:offsetY, width:1672*scale, height:941*scale};
+  for (const [key,value] of Object.entries(scene)) desktop.style.setProperty('--scene-' + key, value + 'px');
   const entrance=document.querySelector('.arch-entry');
   Object.assign(entrance.style,{left:arch.x+'px',top:arch.y+'px',width:arch.width+'px',height:arch.height+'px'});
   const clipped=arch.x<0 || arch.x+arch.width>width || arch.y<0 || arch.y+arch.height>height;

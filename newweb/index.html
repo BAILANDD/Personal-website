@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zhuanz · Personal Space</title><meta name="description" content="Welcome to Zhuanz's personal space — work, process and playful experiments."><link rel="preload" as="image" href="assets/背景2.webp" fetchpriority="high" data-layer="scene">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zhuanz · Personal Space</title><meta name="description" content="Welcome to Zhuanz's personal space — work, process and playful experiments."><link rel="preload" as="image" href="assets/desktop-lawn.webp" fetchpriority="high" data-layer="scene">
 <link rel="preload" as="image" href="assets/天空.webp" fetchpriority="high" data-layer="sky">
 <script>
   const homeUrl = new URL(location.href);
@@ -25,7 +25,17 @@
   </div>
 </div>
 <main class="desktop" aria-label="个人网站复古桌面">
-<div class="arch-entry"><svg viewBox="0 0 178 140" aria-label="Photography"><a href="photography.html" aria-label="Enter Photography"><title>Enter Photography</title><path d="M 1 139 L 1 76 C 1 33 34 1 85 1 C 135 1 175 33 176 76 L 176 139 Z"/></a></svg><span class="arch-tooltip">Enter Photography ↗</span></div>
+<div class="desktop-clouds" aria-hidden="true"></div>
+<div class="arch-entry"><svg viewBox="0 0 178 140" aria-label="Photography"><defs><clipPath id="portal-opening"><path d="M35 138V83C35 56 58 29 88 29C116 29 140 52 145 82L145 138Z"/></clipPath>
+<radialGradient id="portal-depth"><stop stop-color="#fffadc" stop-opacity=".95"/><stop offset=".19" stop-color="#fff4df" stop-opacity=".12"/><stop offset=".72" stop-color="#260747" stop-opacity=".08"/><stop offset="1" stop-color="#180732" stop-opacity=".85"/></radialGradient>
+<pattern id="portal-scan" width="2" height="3" patternUnits="userSpaceOnUse"><path d="M0 2h2" stroke="#1e0949" stroke-opacity=".22" stroke-width="1"/></pattern>
+<path id="portal-spark" d="M0-6L1.3-1.3 6 0 1.3 1.3 0 6-1.3 1.3-6 0-1.3-1.3Z"/></defs>
+<g class="portal-art" clip-path="url(#portal-opening)" aria-hidden="true">
+<image class="portal-spiral" href="assets/portal-spiral.svg" x="-25" y="-20" width="228" height="228"/>
+<rect x="27" y="20" width="125" height="125" fill="url(#portal-depth)"/>
+<rect x="27" y="20" width="125" height="125" fill="url(#portal-scan)"/>
+<g fill="#fffbd1"><use class="portal-spark" href="#portal-spark" x="59" y="61"/><use class="portal-spark" href="#portal-spark" x="126" y="85"/><use class="portal-spark" href="#portal-spark" x="72" y="113"/><use href="#portal-spark" x="106" y="122"/></g>
+</g><a href="photography.html" aria-label="Enter Photography"><title>Enter Photography</title><path d="M 1 139 L 1 76 C 1 33 34 1 85 1 C 135 1 175 33 176 76 L 176 139 Z"/></a></svg><span class="arch-tooltip">Enter Photography ↗</span></div>
 <a class="photography-fallback" href="photography.html" hidden>Photography ↗</a>
 <nav class="shortcuts" aria-label="主导航">
 <button data-page="Resume" aria-label="个人简历"><img src="assets/home.webp" alt=""><img class="label" src="assets/cv.webp" alt="CV"></button>
@@ -42,10 +52,18 @@
 <div class="mobile-note">WELCOME TO MY LITTLE CORNER OF THE INTERNET</div>
 
 <section class="window utility-window" id="utility-window" role="dialog" aria-labelledby="utility-title" hidden><div class="titlebar"><b id="utility-title">About</b><button id="utility-close" aria-label="关闭窗口">×</button></div><div id="utility-content"></div></section>
+<div class="desktop-flowers" aria-hidden="true">
+  <img class="daisy daisy-near-left" src="assets/daisy-near-left.svg" alt="">
+  <img class="daisy daisy-left" src="assets/daisy-left.svg" alt="">
+  <img class="daisy daisy-hill" src="assets/daisy-hill.svg" alt="">
+  <img class="daisy daisy-near-right" src="assets/daisy-near-right.svg" alt="">
+</div>
 </main>
 <script src="scene-geometry.js"></script>
 <script src="app.js"></script>
 <script src="boot.js"></script>
+<script src="portal-tunnel.js" defer></script>
+<script src="portal-transition.js" defer></script>
 <script src="projects.js"></script>
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/Flip.min.js"></script>

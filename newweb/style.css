@@ -97,14 +97,28 @@
 
 /* The original transparent screen opening defines the visible edge exactly.
    Put the supplied scene in front of the screen, like a physical bezel. */
-.desktop { background-image: none; background-color: #54a6ee; }
+.desktop {
+  background: linear-gradient(#0f4ca4, #217cc9 45%, #36a4e3);
+}
+.desktop-clouds {
+  position: absolute;
+  top: var(--scene-top, 0px);
+  left: var(--scene-left, 0px);
+  width: calc(2 * var(--scene-width, 100%));
+  height: var(--scene-height, 100%);
+  z-index: 0;
+  pointer-events: none;
+  background: url('assets/desktop-clouds.webp') repeat-x left top / 50% 100%;
+  animation: cloud-drift 115s linear infinite;
+}
+@keyframes cloud-drift { to { transform: translateX(-50%); } }
 .desktop::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background: var(--home-scene, url('assets/背景2.webp')) center / cover no-repeat;
+  background: var(--home-scene, url('assets/desktop-lawn.webp')) center / cover no-repeat;
 }
 .computer { z-index: 1; }
 .computer::before {
@@ -200,8 +214,19 @@
 }
 .arch-entry{position:absolute;z-index:3;pointer-events:none}
 .arch-entry svg{width:100%;height:100%;overflow:visible;pointer-events:none}
-.arch-entry path{fill:transparent;pointer-events:all;cursor:pointer;transition:fill .2s,stroke .2s;stroke:transparent;stroke-width:2}
+.arch-entry a > path{fill:transparent;pointer-events:all;cursor:pointer;transition:fill .2s,stroke .2s;stroke:transparent;stroke-width:2}
 .arch-entry a:hover path,.arch-entry a:focus-visible path{fill:rgba(216,239,255,.14);stroke:#effbff;filter:drop-shadow(0 0 5px #b3e5ff)}
+.portal-art { pointer-events: none; }
+.portal-spiral {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: portal-spin 9s linear infinite;
+}
+.portal-spark { animation: portal-twinkle 2.8s ease-in-out infinite alternate; }
+.portal-spark:nth-child(2) { animation-delay: -.9s; }
+.portal-spark:nth-child(3) { animation-delay: -1.7s; }
+@keyframes portal-spin { to { transform: rotate(1turn); } }
+@keyframes portal-twinkle { 0%, 25% { opacity: .2; } 75%, 100% { opacity: 1; } }
 .arch-tooltip{position:absolute;bottom:105%;left:50%;transform:translateX(-50%);white-space:nowrap;padding:7px 10px;background:#f5f0ff;color:#393653;border:2px outset white;border-radius:5px;font-size:12px;opacity:0;transition:opacity .15s}
 .arch-entry:has(a:hover) .arch-tooltip,.arch-entry:has(a:focus-visible) .arch-tooltip{opacity:1}
 .photography-fallback{position:absolute;bottom:24px;left:16px;z-index:4;padding:8px 12px;background:#f1eafa;border:2px outset white;color:#332b50;border-radius:5px;font-size:12px;text-decoration:none}
@@ -209,3 +234,86 @@
 
 .resume-download-ready{display:inline-block;color:#45345f;cursor:pointer;text-decoration:none;background:#e5d9f6}
 .resume-download-ready:hover{background:#d7c5ee}
+
+.portal-in-transit { overflow: hidden; }
+.portal-travel {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #131841;
+}
+.portal-travel canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.portal-gate-glow {
+  position: fixed;
+  z-index: 10000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 0 20px #9cedffb0, 0 0 45px #be87ff6e, inset 0 0 25px #8fd3fa80;
+}
+
+.portal-travel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, #13082238 0 1px, transparent 1px 4px);
+}
+
+.portal-gallery {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.desktop-flowers {
+  position: absolute;
+  top: var(--scene-top);
+  left: var(--scene-left);
+  width: var(--scene-width);
+  height: var(--scene-height);
+  z-index: 2;
+  pointer-events: none;
+}
+/* Positions share the same 1672 × 941 cover plane as the lawn. */
+.daisy {
+  position: absolute;
+  display: block;
+  left: calc(var(--x) / 1672 * 100%);
+  top: calc(var(--y) / 941 * 100%);
+  width: calc(var(--w) / 1672 * 100%);
+  height: auto;
+  transform-origin: var(--root) calc(100% - var(--root-lift));
+  animation: daisy-wind var(--cycle) ease-in-out var(--delay) infinite;
+}
+.daisy-near-left { --x: 5; --y: 815; --w: 141; --root: 46%; --root-lift: 5.7%; --cycle: 4.7s; --delay: -.45s; --lean: 5deg; }
+.daisy-left { --x: 132; --y: 783; --w: 112; --root: 46%; --root-lift: 6.8%; --cycle: 4.9s; --delay: -.9s; --lean: 5deg; }
+.daisy-hill { --x: 1546; --y: 604; --w: 86; --root: 48%; --root-lift: 9.9%; --cycle: 5.2s; --delay: -1.4s; --lean: 4deg; }
+.daisy-near-right { --x: 1423; --y: 741; --w: 233; --root: 48%; --root-lift: 4.6%; --cycle: 4.8s; --delay: -1.85s; --lean: 5deg; }
+@keyframes daisy-wind {
+  0%, 100% { rotate: 0deg; }
+  28% { rotate: var(--lean); }
+  70% { rotate: calc(var(--lean) * -.7); }
+}
+
+/* Compensate for the desktop cover crop so the outer blooms stay in frame. */
+@media (min-width: 761px) {
+  .desktop-flowers { --flower-inset: clamp(0px, calc(-1 * var(--scene-left)), 6%); }
+  .daisy-near-left { left: calc(1% + var(--flower-inset)); }
+  .daisy-left { left: calc(8.6% + var(--flower-inset)); top: 80%; }
+  .daisy-near-right, .daisy-hill {
+    left: calc(var(--x) / 1672 * 100% - var(--flower-inset));
+  }
+}

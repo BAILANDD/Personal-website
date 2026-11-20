@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="184" height="157" viewBox="0 0 184 157">
+  <defs>
+    <linearGradient id="petal" gradientUnits="userSpaceOnUse" x1="2" y1="0" x2="68" y2="-15">
+      <stop stop-color="#dfcbdc"/><stop offset=".43" stop-color="#f7e9ef"/><stop offset="1" stop-color="#fff9f2"/>
+    </linearGradient>
+    <radialGradient id="disk" cx=".4" cy=".35" r=".72">
+      <stop stop-color="#ffe368"/><stop offset=".56" stop-color="#ffca34"/><stop offset="1" stop-color="#e69d18"/>
+    </radialGradient>
+    <linearGradient id="leaf" x2="1" y2="1">
+      <stop stop-color="#708f2d"/><stop offset="1" stop-color="#3d631b"/>
+    </linearGradient>
+    <filter id="focus" filterUnits="userSpaceOnUse" x="0" y="0" width="184" height="157">
+      <feGaussianBlur stdDeviation="2.3"/>
+    </filter>
+  </defs>
+  <g filter="url(#focus)">
+    <path d="M85 148 Q78 102 87 67" fill="none" stroke="#577528" stroke-width="6" stroke-linecap="round"/>
+    <path d="M83 136 Q92 114 131.2 116 Q123.8 134 83 136Z" fill="url(#leaf)"/>
+    <g transform="translate(87 67)">
+      <path transform="rotate(201)" fill="url(#petal)" d="M-4 0 C14.5 -10.9 33.4 -17.0 47.2 -17.0 C67.4 -17.0 67.4 14.6 46.0 15.0 C28.4 15.0 10.7 9.0 -4 0Z"/>
+      <path transform="rotate(253)" fill="url(#petal)" d="M-4 0 C12.2 -10.2 28.1 -16.0 39.8 -16.0 C56.7 -16.0 56.7 13.8 38.7 14.1 C23.9 14.1 9.0 8.5 -4 0Z"/>
+      <path transform="rotate(322)" fill="url(#petal)" d="M-4 0 C13.1 -10.9 30.2 -17.0 42.8 -17.0 C61.0 -17.0 61.0 14.6 41.6 15.0 C25.7 15.0 9.7 9.0 -4 0Z"/>
+      <path transform="rotate(25)" fill="url(#petal)" d="M-4 0 C12.0 -10.9 27.6 -17.0 39.0 -17.0 C55.6 -17.0 55.6 14.6 38.0 15.0 C23.4 15.0 8.8 9.0 -4 0Z"/>
+      <path transform="rotate(92)" fill="url(#petal)" d="M-4 0 C12.7 -10.9 29.2 -17.0 41.2 -17.0 C58.9 -17.0 58.9 14.6 40.1 15.0 C24.8 15.0 9.4 9.0 -4 0Z"/>
+      <path transform="rotate(145)" fill="url(#petal)" d="M-4 0 C12.2 -10.9 28.1 -17.0 39.8 -17.0 C56.7 -17.0 56.7 14.6 38.7 15.0 C23.9 15.0 9.0 9.0 -4 0Z"/>
+      <ellipse rx="23" ry="17" transform="rotate(22)" fill="url(#disk)"/>
+    </g>
+  </g>
+</svg>

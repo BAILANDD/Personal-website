@@ -14,7 +14,8 @@
     try {
       await image.decode();
     } catch {
-      const original = image.src.replace(/\.webp$/, '.png');
+      const original = layer === 'scene' ? 'assets/背景2.png'
+        : image.src.replace(/\.webp$/, '.png');
       image.src = original;
       await image.decode();
       if (layer) root.style.setProperty('--home-' + layer, 'url("' + original + '")');
