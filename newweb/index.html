@@ -3,7 +3,13 @@
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zhuanz · Personal Space</title><meta name="description" content="Welcome to Zhuanz's personal space — work, process and playful experiments."><link rel="preload" as="image" href="assets/背景2.webp" fetchpriority="high" data-layer="scene">
 <link rel="preload" as="image" href="assets/天空.webp" fetchpriority="high" data-layer="sky">
 <script>
-  if (!location.hash && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward') {
+  const homeUrl = new URL(location.href);
+  const returningFromPhotography = homeUrl.searchParams.get('from') === 'photography';
+  if (returningFromPhotography) {
+    homeUrl.searchParams.delete('from');
+    history.replaceState(history.state, '', homeUrl);
+  }
+  if (!returningFromPhotography && !location.hash && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward') {
     document.documentElement.classList.add('booting');
     setTimeout(() => document.documentElement.classList.remove('booting', 'revealing'), 10000);
   }
