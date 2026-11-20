@@ -1,0 +1,211 @@
+*{box-sizing:border-box}body{margin:0;background:#54a6ee;color:#10123f;font-family:'Courier New',monospace;font-weight:700}button{font:inherit;cursor:pointer;color:inherit}button:focus-visible{outline:3px dashed #fff;outline-offset:5px}button:hover{filter:brightness(1.08)}.desktop{position:relative;width:100%;height:100svh;min-height:620px;overflow:hidden;background:url('assets/背景2.png') center center/cover no-repeat;isolation:isolate}.shortcuts{position:absolute;left:3.2%;top:5%;width:5.2%;display:grid;gap:24px;z-index:5}.shortcuts button{border:0;background:none;padding:0;transition:transform .16s}.shortcuts button:hover{transform:translateY(-4px)}.shortcuts img{width:100%;display:block;object-fit:contain}.shortcuts .label{width:108%;height:auto;margin-top:-6px}.decoration{position:absolute;pointer-events:none;object-fit:contain}.star{left:14.9%;top:7.6%;width:8%;transform:rotate(-9deg);animation:bob 5s ease-in-out infinite}.disc{left:52%;top:0;width:15%;transform:rotate(-12deg)}.window{position:absolute;border:3px solid #f7f1ff;border-radius:12px;background:#f6eecf;box-shadow:3px 4px 0 #7774a7,inset 0 0 0 2px #7c769f;overflow:hidden;z-index:4}.titlebar{background:linear-gradient(100deg,#bbb8f7,#8a8cdd);border-bottom:2px solid #716a9e;padding:6px 10px;display:flex;justify-content:space-between;font-size:clamp(11px,1.2vw,21px)}.titlebar span{background:#eee9e9;border:1px outset #fff;padding:0 3px;line-height:1}.welcome{left:16.5%;top:12%;width:17%;transform:rotate(-4deg)}.welcome-body{display:flex;align-items:center;justify-content:center;gap:12px;padding:7px 10px}.welcome p{font-size:clamp(12px,1.2vw,20px);line-height:1.3;margin:6px 0}.house{font-size:3vw}.status{right:5%;top:10%;width:19%;transform:rotate(-3deg);background:#f1eef9}.status-body{padding:8px 17px}.status p{font-size:clamp(11px,1.15vw,19px);margin:9px 0}.computer{position:absolute;left:26%;top:17%;width:59%;aspect-ratio:1448/1086;z-index:2}.computer-frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}.screen{position:absolute;left:18.6%;top:9.7%;width:43.6%;height:51%;border-radius:12%/9%;overflow:hidden;background:#0861ff url('assets/背景2.png') center/cover;color:white;z-index:1;transform:rotate(.4deg);font-size:clamp(10px,1vw,18px)}.screen-title{padding:6% 5% 2%;border-bottom:2px solid #c3e9ff;white-space:nowrap;font-size:.9em;display:flex;align-items:center;gap:5px}.screen-title button{margin-left:auto;padding:0 4px;background:#eee;border:2px outset #fff;line-height:1;color:#162159}#screen-content{padding:4% 7%}.hello{font-size:clamp(28px,3.25vw,58px);font-style:italic;letter-spacing:2px;margin:0 0 0 5%}.intro{font-size:1em;line-height:1.22;margin:0 0 5% 12%}.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{border:3px outset #fff7fc;border-radius:7px;background:#fac0e7;box-shadow:2px 3px 0 #003b83;padding:5px 2px;font-size:1.15em;line-height:1.1}.tile i{display:block;font-style:normal;font-size:1.6em;margin-bottom:3px}.tile:nth-child(2){background:#fff095}.tile:nth-child(3){background:#a6ead3}.tile:nth-child(4){background:#c7b0f5}.music{left:14.3%;top:35%;width:12%;transform:rotate(-2deg);background:#e2dce1}.music .titlebar{background:linear-gradient(90deg,#f4a9e2,#dab4ee)}.equalizer{margin:10px 10px 0;height:43px;background:#164664;border:4px inset #d3cbd2;display:flex;align-items:end;gap:4px;padding:4px}.equalizer b{flex:1;background:repeating-linear-gradient(to top,#f1ea37 0 4px,transparent 4px 6px);height:75%;animation:beat .8s ease-in-out infinite alternate}.music-caption{text-align:center;font-size:8px;margin:5px 0}.music button{display:block;margin:0 auto 5px;border:0;background:none;font-size:20px}.floppy{left:13%;bottom:8%;width:16%;transform:rotate(-7deg);z-index:3}.guide{position:absolute;right:1.7%;top:38%;width:23%;z-index:3;pointer-events:none}.guide>img{width:83%;margin-top:9%;margin-left:0}.speech{position:relative;background:#fff2cb;border:2px solid #12143a;border-radius:28px;padding:17px 20px;width:76%;margin-left:20%;font-size:clamp(11px,1.15vw,20px);box-shadow:inset 0 0 14px #fff}.speech:after{content:'';position:absolute;bottom:-22px;left:25%;width:25px;height:30px;background:#fff2cb;clip-path:polygon(0 0,100% 0,0 100%)}.detail h1{font-size:2em;margin:5px 0 14px}.detail p{line-height:1.6;font-weight:400}.back{border:2px outset white;background:#ece6ff;padding:5px 10px;margin-top:10px}.mobile-note{display:none}.paused *{animation-play-state:paused!important}@keyframes beat{to{height:20%}}@media(min-aspect-ratio:19/10){.desktop{min-height:740px}.computer{width:53%;left:28%}}@media(max-width:760px){.desktop{min-height:850px;height:100svh;background-position:40% center}.shortcuts{left:6%;top:3%;width:88%;display:flex;justify-content:space-between;gap:20px}.shortcuts button{width:58px}.star{top:15%;left:5%;width:18%}.disc{top:15%;left:68%;width:24%}.welcome{top:17%;left:27%;width:38%}.welcome p{font-size:12px}.house{font-size:24px}.computer{width:125%;left:-15%;top:34%}.screen{font-size:clamp(10px,2.1vw,16px)}.hello{font-size:7vw}.tiles{gap:5px}.tile{padding:4px 0;border-width:2px}.status{top:auto;bottom:4%;right:6%;width:42%}.status p{font-size:10px;margin:6px 0}.status-body{padding:4px 10px}.music{top:auto;bottom:5%;left:6%;width:32%}.floppy{display:none}.guide{top:64%;right:-3%;width:35%}.speech{display:none}.guide>img{width:100%}.mobile-note{display:block;position:absolute;bottom:1%;width:100%;text-align:center;font-size:7px;letter-spacing:1px}.titlebar{font-size:11px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Ground contact: soft cast shadows plus tighter shadows at each base. */
+.computer::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  left: 5%; right: -1%; bottom: -2%; height: 28%;
+  background:
+    radial-gradient(ellipse at 40% 70%, rgba(23, 36, 8, .62), transparent 62%),
+    radial-gradient(ellipse at 80% 58%, rgba(23, 36, 8, .43), transparent 60%);
+  filter: blur(10px);
+  transform: skewX(-12deg);
+}
+.computer-frame { filter: drop-shadow(3px 7px 4px rgba(25, 33, 10, .30)); }
+.floppy { aspect-ratio: 1; }
+.floppy img { position: relative; z-index: 1; display: block; width: 100%; height: 100%; filter: drop-shadow(2px 5px 3px rgba(25, 33, 10, .4)); }
+.floppy::before {
+  content: ""; position: absolute; pointer-events: none;
+  left: 7%; bottom: -1%; width: 92%; height: 24%;
+  background: radial-gradient(ellipse, rgba(23, 36, 8, .64) 0%, rgba(23, 36, 8, .28) 40%, transparent 72%);
+  filter: blur(5px); transform: rotate(7deg);
+}
+.guide::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  left: 18%; bottom: -1%; width: 57%; height: 9%;
+  background: radial-gradient(ellipse, rgba(23, 36, 8, .68) 0%, rgba(23, 36, 8, .32) 38%, transparent 72%);
+  filter: blur(4px);
+}
+.guide > img { filter: drop-shadow(2px 4px 3px rgba(25, 33, 10, .24)); }
+@media (max-width: 760px) {
+  .computer::before { filter: blur(6px); }
+  .guide::before { left: 23%; width: 68%; height: 14%; }
+}
+
+/* Screen coordinates follow the computer already present in 背景2.png. */
+.computer { left:var(--screen-x); top:var(--screen-y); width:var(--screen-width); height:var(--screen-height); aspect-ratio:auto; }
+.computer::before { content:none; }
+.screen { inset:0; width:100%; height:100%; transform:none; border-radius:7% / 9%; background:#0861ff url('assets/天空.png') center / cover; clip-path:polygon(3% 0, 34% 0, 96% 5%, 99% 15%, 100% 93%, 97% 99%, 2% 100%, 0 94%, 0 24%); font-size:var(--screen-font); }
+.screen-title { padding-top:6%; }
+.hello { font-size:3em; }
+@media(max-width:760px) { .desktop { background-position:center; } }
+
+/* Keep overlay components smaller without changing the background or screen. */
+.welcome, .music, .status {
+  scale: .8;
+  transform-origin: top left;
+}
+.status { transform-origin: top right; }
+.shortcuts {
+  scale: .8;
+  transform-origin: top left;
+}
+.star, .disc {
+  scale: .8;
+  transform-origin: center;
+}
+.guide {
+  scale: .8;
+  transform-origin: bottom center;
+}
+
+/* Anchor the CD in the sky above the monitor, not to viewport percentages. */
+.disc {
+  left: var(--disc-x);
+  top: var(--disc-y);
+  width: var(--disc-size);
+  scale: 1;
+  transform: translateX(-50%) rotate(-12deg);
+}
+/* Soft glass depth: cool reflected light and blue-grey edge shading. */
+.screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow:
+    inset 5px 7px 14px rgba(46, 72, 119, .36),
+    inset -4px -5px 12px rgba(67, 106, 149, .28),
+    inset 2px 2px 3px rgba(194, 227, 255, .7),
+    inset -2px -2px 3px rgba(162, 211, 240, .55);
+  background:
+    linear-gradient(176deg, rgba(194, 222, 251, .16), transparent 13%, transparent 88%, rgba(126, 192, 230, .12));
+}
+
+/* Project the complete UI, including its background and glass shading,
+   onto the monitor plane rather than merely clipping a front-facing UI. */
+.screen {
+  transform-origin: 0 0;
+  transform: var(--screen-projection);
+  clip-path: none;
+  border-radius: 7% / 8%;
+}
+
+/* The original transparent screen opening defines the visible edge exactly.
+   Put the supplied scene in front of the screen, like a physical bezel. */
+.desktop { background-image: none; background-color: #54a6ee; }
+.desktop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: var(--home-scene, url('assets/背景2.webp')) center / cover no-repeat;
+}
+.computer { z-index: 1; }
+.computer::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  width: auto;
+  height: auto;
+  background: #0861ff var(--home-sky, url('assets/天空.webp')) center / cover no-repeat;
+  filter: none;
+  transform: none;
+  border-radius: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.screen {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.screen::after { content: none; }
+.star, .disc { z-index: 3; }
+.mobile-note { z-index: 3; }
+
+/* Only title bars capture dragging; window controls remain clickable. */
+.welcome .titlebar, .music .titlebar, .status .titlebar {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.dragging .titlebar { cursor: grabbing; }
+.titlebar:focus-visible { outline: 2px dashed #fff; outline-offset: -5px; }
+/* Updated navigation, retaining the existing desktop and screen geometry. */
+.primary-tiles .tile{min-height:7.4em;padding:12px 3px;color:#252449}
+.primary-tiles .tile i{font-size:2em;margin-bottom:10px}
+.primary-tiles .tile small{display:block;font: .6em/1.5 system-ui,sans-serif;margin-top:10px}
+.shortcuts{gap:15px}
+.desktop-symbol{display:flex;align-items:center;justify-content:center;height:4.1vw;min-height:45px;font-size:3.2vw;color:#22264c;text-shadow:2px 2px #fff;background:linear-gradient(145deg,#fff6be,#b7b3ef);border:3px outset #eee5ff;border-radius:14px;margin-bottom:5px}
+.icon-label{display:block;background:linear-gradient(#fff,#dfdbf4);border:2px outset #eee;border-radius:5px;padding:3px 2px;font-size:clamp(9px,.85vw,15px);box-shadow:1px 2px #535782}
+.utility-window{left:32%;top:24%;width:min(420px,85vw);z-index:6;background:#fff7df}
+.utility-window[hidden]{display:none}
+.utility-window .titlebar{cursor:grab;touch-action:none;user-select:none}
+.utility-window .titlebar button{border:2px outset #fff;background:#eee7f5;font-size:20px;line-height:1}
+#utility-content{padding:20px 24px;font:14px/1.8 system-ui,sans-serif;max-height:55svh;overflow:auto}
+#utility-content h2{margin-top:0}.empty-hint{color:#78718a}
+@media(max-width:760px){.shortcuts{gap:10px}.desktop-symbol{font-size:32px;height:48px}.icon-label{font-size:8px}.utility-window{left:7%;top:25%}.primary-tiles .tile{min-height:7em;padding:6px 2px}}
+
+/* Maintain the existing content position after removing the screen title bar. */
+#screen-content { padding-top: 16%; }
+
+/* Initial desktop positions match the supplied arrangement. */
+@media (min-width:761px) {
+  .welcome { left:13.3%; top:19.5%; }
+  .music { left:81%; top:7.5%; bottom:auto; }
+}
+.disc {
+  pointer-events:auto;
+  cursor:grab;
+  touch-action:none;
+  user-select:none;
+  -webkit-user-select:none;
+  -webkit-user-drag:none;
+}
+.disc.dragging { cursor:grabbing; }
+.disc:focus-visible { outline:2px dashed #fff; outline-offset:4px; }
+
+
+.contact-list{list-style:none;margin:20px 0 0;padding:0}
+.contact-list li{padding:13px 0;border-top:1px dashed #cec4d8;display:flex;flex-direction:column;gap:4px}
+.contact-name{font-weight:700;color:#252449}
+.contact-list a{color:#675294;overflow-wrap:anywhere;text-underline-offset:4px}
+.contact-list a:hover{color:#403177}
+.contact-pending{font-size:12px;color:#8a8194}
+
+.resume-download{padding:10px 16px;border:2px outset #fff;background:#e8e0f4;color:#84798f;cursor:not-allowed;border-radius:5px}
+.resume-download:hover{filter:none}
+
+/* Match the CV computer's apparent size to the adjacent desktop icons. */
+.shortcuts button[data-page="Resume"] > img:not(.label) { width:115%; max-width:none; margin-left:-7.5%; }
+
+.star { pointer-events:auto; cursor:grab; touch-action:none; user-select:none; -webkit-user-select:none; -webkit-user-drag:none; animation:none; }
+.star.dragging { cursor:grabbing; }
+.star:focus-visible { outline:2px dashed white; outline-offset:4px; }
+
+/* The wrapper owns drag translation; the image owns the gentle float. */
+.star > img { display:block; width:100%; height:auto; pointer-events:none; animation:bob 5s ease-in-out infinite; }
+@keyframes bob {
+  0%, 50%, 100% { translate: 0 0; }
+  25% { translate: 0 -20px; }
+  75% { translate: 0 20px; }
+}
+.arch-entry{position:absolute;z-index:3;pointer-events:none}
+.arch-entry svg{width:100%;height:100%;overflow:visible;pointer-events:none}
+.arch-entry path{fill:transparent;pointer-events:all;cursor:pointer;transition:fill .2s,stroke .2s;stroke:transparent;stroke-width:2}
+.arch-entry a:hover path,.arch-entry a:focus-visible path{fill:rgba(216,239,255,.14);stroke:#effbff;filter:drop-shadow(0 0 5px #b3e5ff)}
+.arch-tooltip{position:absolute;bottom:105%;left:50%;transform:translateX(-50%);white-space:nowrap;padding:7px 10px;background:#f5f0ff;color:#393653;border:2px outset white;border-radius:5px;font-size:12px;opacity:0;transition:opacity .15s}
+.arch-entry:has(a:hover) .arch-tooltip,.arch-entry:has(a:focus-visible) .arch-tooltip{opacity:1}
+.photography-fallback{position:absolute;bottom:24px;left:16px;z-index:4;padding:8px 12px;background:#f1eafa;border:2px outset white;color:#332b50;border-radius:5px;font-size:12px;text-decoration:none}
+.photography-fallback[hidden],.arch-entry[hidden]{display:none}
+
+.resume-download-ready{display:inline-block;color:#45345f;cursor:pointer;text-decoration:none;background:#e5d9f6}
+.resume-download-ready:hover{background:#d7c5ee}

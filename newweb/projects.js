@@ -1,0 +1,263 @@
+window.PORTFOLIO_PROJECTS = {
+  "scomparsa": {
+    "title": "Scomparsa dell'infanzia",
+    "subtitle": "童年的消逝",
+    "year": "2025",
+    "type": "Interactive Project",
+    "hero": {
+      "src": "assets/thumbs/童年的消逝全景.webp",
+      "alt": "Scomparsa dell'infanzia full panorama"
+    },
+    "thumbnail": "assets/thumbs/scomparsa-dell-infanzia.mp4.webp",
+    "sections": [
+      {
+        "title": "Project Introduction",
+        "copy": "《童年的消逝》是一件围绕儿童认知、媒介环境与数字图像关系展开的互动装置作品。项目关注当儿童持续接触屏幕、网络图像与数字媒介后，现实经验与虚拟信息之间的边界如何逐渐发生变化。作品通过 TouchDesigner 构建实时视觉系统，将观众的操作转化为图像状态、运动、失真与模糊等视觉变化，使观看者直接参与作品的生成过程。"
+      },
+      {
+        "title": "Background",
+        "copy": "项目的前期研究围绕儿童成长环境、媒介使用方式与视觉认知展开，并尝试梳理数字媒介进入儿童日常生活之后，对认知方式、信息接收和成长经验所产生的变化。"
+      },
+      {
+        "title": "Media Impact",
+        "copy": "数字媒介已经深度进入儿童的日常生活。屏幕、短视频、游戏与网络信息不断改变儿童获取信息和理解世界的方式，同时也让现实经验与虚拟内容之间的边界变得更加模糊。项目通过前期研究梳理这些变化，并将其转化为后续作品中的视觉与交互线索。"
+      },
+      {
+        "title": "Design Development",
+        "copy": "设计阶段主要围绕视觉元素、交互方式与空间呈现之间的关系展开。通过草图与系统结构梳理，将儿童、媒介信息、图像干扰与实时生成逐步整合为统一的交互体验。"
+      },
+      {
+        "title": "Interaction Principle",
+        "copy": "作品通过实体控制与 TouchDesigner 实时视觉系统建立互动关系。观众的操作可以改变图像状态、运动速度、失真程度、模糊与视觉效果，使原本固定的影像不断发生变化。最终画面并不是预先播放的单一结果，而是在观众参与过程中持续生成。"
+      },
+      {
+        "title": "Final Installation",
+        "copy": "最终装置将实时生成的视觉内容、交互设备与空间环境结合，使观众的操作直接成为作品视觉变化的一部分。"
+      },
+      {
+        "title": "Virtual Exhibition",
+        "copy": "虚拟展览部分进一步模拟作品在展示空间中的观看关系，用于呈现影像尺度、装置位置与观众观看距离之间的空间效果。"
+      }
+    ],
+    "bodyHtml": "<figure class=\"detail-figure detail-figure--panorama\">\n                <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝全景.webp\" alt=\"Scomparsa dell'infanzia full panorama\" draggable=\"false\" />\n              </figure>\n\n              <p class=\"detail-video-link-row\">\n                <a class=\"detail-video-link\" href=\"https://www.bilibili.com/video/BV1z38g66EdW?vd_source=1190c9e2723a2aedd2e785749b2e6e56\" target=\"_blank\" rel=\"noopener noreferrer\">点击观看作品视频 ↗</a>\n              </p>\n\n              <section class=\"detail-section detail-section--intro\">\n                <h2 class=\"detail-section-title\">Project Introduction</h2>\n                <p class=\"detail-copy\">\n                  《童年的消逝》是一件围绕儿童认知、媒介环境与数字图像关系展开的互动装置作品。项目关注当儿童持续接触屏幕、网络图像与数字媒介后，现实经验与虚拟信息之间的边界如何逐渐发生变化。作品通过 TouchDesigner 构建实时视觉系统，将观众的操作转化为图像状态、运动、失真与模糊等视觉变化，使观看者直接参与作品的生成过程。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Background</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝背景.jpg\" alt=\"Scomparsa dell'infanzia background research\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  项目的前期研究围绕儿童成长环境、媒介使用方式与视觉认知展开，并尝试梳理数字媒介进入儿童日常生活之后，对认知方式、信息接收和成长经验所产生的变化。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Media Impact</h2>\n                <div class=\"detail-grid detail-grid--two\">\n                  <figure class=\"detail-figure\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝影响1.jpg\" alt=\"Scomparsa dell'infanzia media impact 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                  <figure class=\"detail-figure\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝影响2.jpg\" alt=\"Scomparsa dell'infanzia media impact 2\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n                <p class=\"detail-copy\">\n                  数字媒介已经深度进入儿童的日常生活。屏幕、短视频、游戏与网络信息不断改变儿童获取信息和理解世界的方式，同时也让现实经验与虚拟内容之间的边界变得更加模糊。项目通过前期研究梳理这些变化，并将其转化为后续作品中的视觉与交互线索。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Design Development</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝设计构思和草稿.jpg\" alt=\"Scomparsa dell'infanzia design development sketches\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  设计阶段主要围绕视觉元素、交互方式与空间呈现之间的关系展开。通过草图与系统结构梳理，将儿童、媒介信息、图像干扰与实时生成逐步整合为统一的交互体验。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Interaction Principle</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝交互原理.jpg\" alt=\"Scomparsa dell'infanzia interaction principle\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  作品通过实体控制与 TouchDesigner 实时视觉系统建立互动关系。观众的操作可以改变图像状态、运动速度、失真程度、模糊与视觉效果，使原本固定的影像不断发生变化。最终画面并不是预先播放的单一结果，而是在观众参与过程中持续生成。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Final Installation</h2>\n                <div class=\"detail-final-flow\">\n                  <div class=\"detail-grid detail-grid--two\">\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝局部1.JPG\" alt=\"Scomparsa dell'infanzia final installation detail 1\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝局部2.JPG\" alt=\"Scomparsa dell'infanzia final installation detail 2\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                  </div>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝局部3.JPG\" alt=\"Scomparsa dell'infanzia final installation detail 3\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝局部4.JPG\" alt=\"Scomparsa dell'infanzia final installation detail 4\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n                <p class=\"detail-copy\">\n                  最终装置将实时生成的视觉内容、交互设备与空间环境结合，使观众的操作直接成为作品视觉变化的一部分。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Virtual Exhibition</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/童年的消逝虚拟展览.jpg\" alt=\"Scomparsa dell'infanzia virtual exhibition\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  虚拟展览部分进一步模拟作品在展示空间中的观看关系，用于呈现影像尺度、装置位置与观众观看距离之间的空间效果。\n                </p>\n              </section>\n\n              <section class=\"detail-meta-block\" aria-label=\"Project metadata\">\n                <ul>\n                  <li>Type: Interactive Project</li>\n                  <li>Year: 2025</li>\n                </ul>\n              </section>",
+    "imageCount": 11
+  },
+  "corallo": {
+    "title": "Energia del Corallo",
+    "subtitle": "珊瑚泣韵",
+    "year": "2025",
+    "type": "3D Project",
+    "hero": {
+      "src": "assets/thumbs/珊瑚泣韵全景.webp",
+      "alt": "Energia del Corallo full panorama"
+    },
+    "thumbnail": "assets/thumbs/energia-del-corallo.mp4.webp",
+    "sections": [
+      {
+        "title": "Project Introduction",
+        "copy": "《珊瑚泣韵》以珊瑚的自然形态与生态意象为视觉出发点，通过 3D 建模、数字绘制与图像合成等方式，将珊瑚的结构、纹理与色彩转化为具有空间感与叙事性的视觉场景。项目尝试在自然形态与数字媒介之间建立新的视觉关系，使珊瑚从现实中的生态对象转化为一种可被重新观看和感知的数字景观。"
+      },
+      {
+        "title": "Background Research",
+        "copy": "前期研究从珊瑚的生长结构、形态特征、色彩层次与生态环境展开，通过图像资料与视觉归纳提取可用于后续创作的形态语言，为场景构图、色彩系统与细节设计建立基础。"
+      },
+      {
+        "title": "Research / Context",
+        "copy": "珊瑚既具有高度复杂的自然结构，也承载着脆弱的生态关系。项目希望通过视觉设计重新组织这些信息，使环境议题不只停留在知识层面，而能够转化为更加直观的视觉体验。"
+      },
+      {
+        "title": "Sketch Development",
+        "copy": "草图阶段主要探索珊瑚主体、环境元素与画面空间之间的关系，通过不同构图与形态组合确定最终场景的视觉重心与层次结构。"
+      },
+      {
+        "title": "Final Details",
+        "copy": "最终画面通过局部纹理、颜色叠加与空间层次进一步强化珊瑚的有机感。细节既保留自然形态的复杂性，也通过数字处理形成更具幻想感的视觉语言。"
+      }
+    ],
+    "bodyHtml": "<figure class=\"detail-figure detail-figure--panorama\">\n                <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵全景.webp\" alt=\"Energia del Corallo full panorama\" draggable=\"false\" />\n              </figure>\n\n              <p class=\"detail-video-link-row\">\n                <a class=\"detail-video-link\" href=\"https://www.bilibili.com/video/BV1RTbr6SESr?vd_source=1190c9e2723a2aedd2e785749b2e6e56\" target=\"_blank\" rel=\"noopener noreferrer\">点击观看作品视频 ↗</a>\n              </p>\n\n              <section class=\"detail-section detail-section--intro\">\n                <h2 class=\"detail-section-title\">Project Introduction</h2>\n                <p class=\"detail-copy\">\n                  《珊瑚泣韵》以珊瑚的自然形态与生态意象为视觉出发点，通过 3D 建模、数字绘制与图像合成等方式，将珊瑚的结构、纹理与色彩转化为具有空间感与叙事性的视觉场景。项目尝试在自然形态与数字媒介之间建立新的视觉关系，使珊瑚从现实中的生态对象转化为一种可被重新观看和感知的数字景观。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Background Research</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵背景调查.jpg\" alt=\"Energia del Corallo background research board\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  前期研究从珊瑚的生长结构、形态特征、色彩层次与生态环境展开，通过图像资料与视觉归纳提取可用于后续创作的形态语言，为场景构图、色彩系统与细节设计建立基础。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Research / Context</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵研究必要性.jpg\" alt=\"Energia del Corallo research context board\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  珊瑚既具有高度复杂的自然结构，也承载着脆弱的生态关系。项目希望通过视觉设计重新组织这些信息，使环境议题不只停留在知识层面，而能够转化为更加直观的视觉体验。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Sketch Development</h2>\n                <div class=\"detail-grid detail-grid--two\">\n                  <figure class=\"detail-figure\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵草图.jpg\" alt=\"Energia del Corallo sketch development 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                  <figure class=\"detail-figure\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵草图2.jpg\" alt=\"Energia del Corallo sketch development 2\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n                <p class=\"detail-copy\">\n                  草图阶段主要探索珊瑚主体、环境元素与画面空间之间的关系，通过不同构图与形态组合确定最终场景的视觉重心与层次结构。\n                </p>\n              </section>\n\n              <section class=\"detail-section detail-section--final\">\n                <h2 class=\"detail-section-title\">Final Details</h2>\n                <p class=\"detail-copy\">\n                  最终画面通过局部纹理、颜色叠加与空间层次进一步强化珊瑚的有机感。细节既保留自然形态的复杂性，也通过数字处理形成更具幻想感的视觉语言。\n                </p>\n\n                <div class=\"detail-final-flow\">\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵局部1.webp\" alt=\"Energia del Corallo final detail 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <div class=\"detail-grid detail-grid--two\">\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵局部2.webp\" alt=\"Energia del Corallo final detail 2\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵局部3.webp\" alt=\"Energia del Corallo final detail 3\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                  </div>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵局部4.webp\" alt=\"Energia del Corallo final detail 4\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <div class=\"detail-grid detail-grid--two\">\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵局部5.webp\" alt=\"Energia del Corallo final detail 5\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/珊瑚泣韵局部6.webp\" alt=\"Energia del Corallo final detail 6\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                  </div>\n                </div>\n              </section>\n\n              <section class=\"detail-meta-block\" aria-label=\"Project metadata\">\n                <ul>\n                  <li>Type: 3D Project</li>\n                  <li>Year: 2025</li>\n                </ul>\n              </section>",
+    "imageCount": 11
+  },
+  "lillit": {
+    "title": "Lil.Lit",
+    "subtitle": "二手母婴平台设计",
+    "year": "2024",
+    "type": "UI / UX Design",
+    "hero": {
+      "src": "assets/thumbs/lillit封面.jpg",
+      "alt": "Lil.Lit 二手母婴平台设计"
+    },
+    "thumbnail": "assets/thumbs/lillit封面.jpg",
+    "sections": [
+      {
+        "title": "Project Background",
+        "copy": "LIL.LIT 是一款面向年轻父母的二手母婴用品交易与育儿信息平台。项目关注母婴用品使用周期短、闲置率高以及二手交易过程中信任与信息筛选成本较高等问题，希望通过更加清晰的交易流程、商品信息结构与社区内容，为用户建立更安全、便捷的使用体验。"
+      },
+      {
+        "title": "Task",
+        "copy": "基于前期研究，项目进一步明确核心设计任务，并将用户在商品交易、信息获取与育儿交流过程中的主要问题转化为具体的产品设计目标。"
+      },
+      {
+        "title": "Persona",
+        "copy": "通过目标用户画像进一步梳理年轻父母在时间、预算、商品安全与育儿信息获取方面的需求，为后续功能与流程设计提供用户依据。"
+      },
+      {
+        "title": "Storyboard",
+        "copy": "故事版将用户需求放入实际生活场景中，用于观察用户从产生需求、寻找商品到完成交易与获取相关信息的完整使用过程。"
+      },
+      {
+        "title": "User Flow",
+        "copy": "用户流程进一步整理了商品浏览、筛选、交易、发布以及社区内容等主要功能之间的关系，并用于确认核心任务的操作路径。"
+      },
+      {
+        "title": "System Map",
+        "copy": "在用户流程基础上，将产品功能进一步整理为系统结构，明确不同功能模块与信息层级之间的关系。"
+      },
+      {
+        "title": "Design System / Visual Spec",
+        "copy": "视觉系统围绕柔和、友好与可信赖的产品气质建立统一的色彩、字体与界面组件规范，为后续页面设计保持一致性。"
+      },
+      {
+        "title": "Low-Fidelity Prototype",
+        "copy": "低保真阶段主要验证页面信息结构、核心功能位置与主要任务路径，在进入视觉设计前确认产品结构是否清晰可用。"
+      },
+      {
+        "title": "User Testing",
+        "copy": "通过原型测试观察用户完成核心任务时的操作路径与理解成本，并记录流程、信息层级与界面反馈中仍需要调整的问题。"
+      },
+      {
+        "title": "Iteration / Optimization",
+        "copy": "根据测试结果对页面结构、操作路径与信息展示方式进一步调整，在保持核心功能完整的同时降低操作复杂度，并强化主要信息的视觉层级。"
+      },
+      {
+        "title": "High-Fidelity Design",
+        "copy": ""
+      }
+    ],
+    "bodyHtml": "<figure class=\"detail-figure detail-figure--panorama\">\n                <img class=\"detail-image\" src=\"assets/thumbs/lillit封面.jpg\" alt=\"Lil.Lit 二手母婴平台设计\" draggable=\"false\" />\n              </figure>\n\n              <p class=\"detail-video-link-row\">\n                <a class=\"detail-video-link\" data-external-video-project=\"lillit\" href=\"https://www.bilibili.com/video/BV1iy4463EEm?vd_source=1190c9e2723a2aedd2e785749b2e6e56\" target=\"_blank\" rel=\"noopener noreferrer\">点击观看作品视频 ↗</a>\n              </p>\n\n              <section class=\"detail-section detail-section--intro\">\n                <h2 class=\"detail-section-title\">Project Background</h2>\n                <p class=\"detail-copy\">\n                  LIL.LIT 是一款面向年轻父母的二手母婴用品交易与育儿信息平台。项目关注母婴用品使用周期短、闲置率高以及二手交易过程中信任与信息筛选成本较高等问题，希望通过更加清晰的交易流程、商品信息结构与社区内容，为用户建立更安全、便捷的使用体验。\n                </p>\n                <div class=\"detail-image-stack\">\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit背景1.jpg\" alt=\"LIL.LIT project background 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit背景2.jpg\" alt=\"LIL.LIT project background 2\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit背景3.jpg\" alt=\"LIL.LIT project background 3\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit背景4.jpg\" alt=\"LIL.LIT project background 4\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Task</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/lillit任务.jpg\" alt=\"LIL.LIT task definition\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  基于前期研究，项目进一步明确核心设计任务，并将用户在商品交易、信息获取与育儿交流过程中的主要问题转化为具体的产品设计目标。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Persona</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/lillit的persona.jpg\" alt=\"LIL.LIT persona\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  通过目标用户画像进一步梳理年轻父母在时间、预算、商品安全与育儿信息获取方面的需求，为后续功能与流程设计提供用户依据。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Storyboard</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/lillit故事版.jpg\" alt=\"LIL.LIT storyboard\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  故事版将用户需求放入实际生活场景中，用于观察用户从产生需求、寻找商品到完成交易与获取相关信息的完整使用过程。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">User Flow</h2>\n                <div class=\"detail-image-stack\">\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit用户流程1.jpg\" alt=\"LIL.LIT user flow 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit用户流程2.jpg\" alt=\"LIL.LIT user flow 2\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n                <p class=\"detail-copy\">\n                  用户流程进一步整理了商品浏览、筛选、交易、发布以及社区内容等主要功能之间的关系，并用于确认核心任务的操作路径。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">System Map</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/lillit系统地图.jpg\" alt=\"LIL.LIT system map\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  在用户流程基础上，将产品功能进一步整理为系统结构，明确不同功能模块与信息层级之间的关系。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Design System / Visual Spec</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/lillit规范.jpg\" alt=\"LIL.LIT design system and visual spec\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  视觉系统围绕柔和、友好与可信赖的产品气质建立统一的色彩、字体与界面组件规范，为后续页面设计保持一致性。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Low-Fidelity Prototype</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/lillit低保真.jpg\" alt=\"LIL.LIT low-fidelity prototype\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  低保真阶段主要验证页面信息结构、核心功能位置与主要任务路径，在进入视觉设计前确认产品结构是否清晰可用。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">User Testing</h2>\n                <div class=\"detail-image-stack\">\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit测试1.jpg\" alt=\"LIL.LIT user testing 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit测试2.jpg\" alt=\"LIL.LIT user testing 2\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n                <p class=\"detail-copy\">\n                  通过原型测试观察用户完成核心任务时的操作路径与理解成本，并记录流程、信息层级与界面反馈中仍需要调整的问题。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Iteration / Optimization</h2>\n                <div class=\"detail-image-stack\">\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit优化1.jpg\" alt=\"LIL.LIT optimization 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                  <figure class=\"detail-figure detail-figure--wide\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit优化2.jpg\" alt=\"LIL.LIT optimization 2\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n                <p class=\"detail-copy\">\n                  根据测试结果对页面结构、操作路径与信息展示方式进一步调整，在保持核心功能完整的同时降低操作复杂度，并强化主要信息的视觉层级。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">High-Fidelity Design</h2>\n                <div class=\"detail-high-fidelity-flow\">\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit高保真1.jpg\" alt=\"LIL.LIT high-fidelity design 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <div class=\"detail-grid detail-grid--two\">\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/lillit高保真2.jpg\" alt=\"LIL.LIT high-fidelity design 2\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/lillit高保真3.jpg\" alt=\"LIL.LIT high-fidelity design 3\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                  </div>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit高保真4.jpg\" alt=\"LIL.LIT high-fidelity design 4\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <div class=\"detail-grid detail-grid--two\">\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/lillit高保真5.jpg\" alt=\"LIL.LIT high-fidelity design 5\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/lillit高保真6.jpg\" alt=\"LIL.LIT high-fidelity design 6\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                  </div>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/lillit高保真7.jpg\" alt=\"LIL.LIT high-fidelity design 7\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n              </section>\n\n              <section class=\"detail-meta-block\" aria-label=\"Project metadata\">\n                <ul>\n                  <li>Type: UI / UX Design</li>\n                  <li>Year: 2024</li>\n                </ul>\n              </section>",
+    "imageCount": 24
+  },
+  "mengyouji": {
+    "title": "《钟秀梦游记》",
+    "subtitle": "插画绘本",
+    "year": "2023",
+    "type": "Illustration / Picture Book",
+    "hero": {
+      "src": "assets/thumbs/梦游记背景.jpg",
+      "alt": "钟秀梦游记 project background"
+    },
+    "thumbnail": "assets/thumbs/梦游记封面.jpg",
+    "sections": [
+      {
+        "title": "Project Background",
+        "copy": "《钟秀梦游记》是一组以绘本叙事为核心展开的插画项目。作品围绕梦境、游历与想象性的视觉体验展开，通过场景设定、色彩氛围与叙事节奏，构建具有故事感和画面延展性的绘本世界。"
+      },
+      {
+        "title": "Story Script",
+        "copy": "在正式绘制之前，项目先通过故事脚本整理叙事结构与画面顺序，用于明确情节推进、视觉重点以及绘本阅读中的节奏关系。"
+      },
+      {
+        "title": "Final Illustrations",
+        "copy": "在完成前期设定与脚本梳理后，项目进入正式成图阶段，通过完整插画画面呈现故事情境、角色氛围与整体视觉语言。"
+      },
+      {
+        "title": "Display / Presentation",
+        "copy": "展示部分用于呈现该项目在最终输出中的整体效果，帮助观者从作品集展示层面理解绘本插画项目的完整视觉呈现方式。"
+      }
+    ],
+    "bodyHtml": "<section class=\"detail-section detail-section--intro\">\n                <h2 class=\"detail-section-title\">Project Background</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/梦游记背景.jpg\" alt=\"钟秀梦游记 project background\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  《钟秀梦游记》是一组以绘本叙事为核心展开的插画项目。作品围绕梦境、游历与想象性的视觉体验展开，通过场景设定、色彩氛围与叙事节奏，构建具有故事感和画面延展性的绘本世界。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Story Script</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/梦游记故事.webp\" alt=\"钟秀梦游记 story script\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  在正式绘制之前，项目先通过故事脚本整理叙事结构与画面顺序，用于明确情节推进、视觉重点以及绘本阅读中的节奏关系。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Final Illustrations</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/梦游记成图.webp\" alt=\"钟秀梦游记 final illustrations\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  在完成前期设定与脚本梳理后，项目进入正式成图阶段，通过完整插画画面呈现故事情境、角色氛围与整体视觉语言。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">Display / Presentation</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/梦游记展示.webp\" alt=\"钟秀梦游记 display presentation\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  展示部分用于呈现该项目在最终输出中的整体效果，帮助观者从作品集展示层面理解绘本插画项目的完整视觉呈现方式。\n                </p>\n              </section>\n\n              <section class=\"detail-meta-block\" aria-label=\"Project metadata\">\n                <ul>\n                  <li>Type: Illustration / Picture Book</li>\n                  <li>Year: 2023</li>\n                </ul>\n              </section>",
+    "imageCount": 4
+  },
+  "suicidio": {
+    "title": "SUICIDIO",
+    "subtitle": "自杀",
+    "year": "2025",
+    "type": "Generative Visual / Video Art",
+    "hero": {
+      "src": "assets/thumbs/suicidio封面.webp",
+      "alt": "SUICIDIO cover visual"
+    },
+    "thumbnail": "assets/thumbs/suicidio封面.webp",
+    "sections": [
+      {
+        "title": "PROJECT INTRODUCTION",
+        "copy": "《SUICIDIO》是一件围绕病毒传播、社会恐惧与个体心理焦虑展开的生成影像作品。作品将病毒视为一种关于恐惧扩散的视觉隐喻，通过高饱和色彩、流体结构与不断生长、扭曲的有机形态，构建介于微观生物与抽象数字景观之间的视觉状态。项目主要在 TouchDesigner 中完成，通过编写 Shader 控制核心动态视觉，使图像产生类似病毒扩散、聚合与形态变化的生成效果，并结合音频分析让视觉随声音实时响应；后期使用 After Effects 对影像与音乐节奏进行进一步整理和剪辑，最终形成一套关于未知威胁、传播与心理压迫的动态视觉表达。"
+      },
+      {
+        "title": "TECHNICAL PROCESS",
+        "copy": "作品的核心动态视觉在 TouchDesigner 中通过 Shader 构建。通过编辑 Shader 参数与图像处理逻辑，使基础视觉不断发生扩散、扭曲、聚合与形态变化，形成类似病毒生长和传播的动态效果。在此基础上进一步结合音频分析，将声音中的节奏与强度映射到视觉参数，使图像能够随声音实时产生变化，从而建立声音与生成视觉之间的动态关系。"
+      },
+      {
+        "title": "FINAL VISUALS",
+        "copy": "最终视觉通过不同的粒子、流体与有机形态变化呈现病毒扩散的不同状态，使同一套生成系统在时间过程中持续产生新的视觉结果。"
+      }
+    ],
+    "bodyHtml": "<figure class=\"detail-figure detail-figure--panorama\">\n                <img class=\"detail-image\" src=\"assets/thumbs/suicidio封面.webp\" alt=\"SUICIDIO cover visual\" draggable=\"false\" />\n              </figure>\n\n              <p class=\"detail-video-link-row\">\n                <a class=\"detail-video-link\" href=\"https://www.bilibili.com/video/BV18Q8u6WEPr?vd_source=1190c9e2723a2aedd2e785749b2e6e56\" target=\"_blank\" rel=\"noopener noreferrer\">点击观看作品视频 ↗</a>\n              </p>\n\n              <section class=\"detail-section detail-section--intro\">\n                <h2 class=\"detail-section-title\">PROJECT INTRODUCTION</h2>\n                <p class=\"detail-copy\">\n                  《SUICIDIO》是一件围绕病毒传播、社会恐惧与个体心理焦虑展开的生成影像作品。作品将病毒视为一种关于恐惧扩散的视觉隐喻，通过高饱和色彩、流体结构与不断生长、扭曲的有机形态，构建介于微观生物与抽象数字景观之间的视觉状态。项目主要在 TouchDesigner 中完成，通过编写 Shader 控制核心动态视觉，使图像产生类似病毒扩散、聚合与形态变化的生成效果，并结合音频分析让视觉随声音实时响应；后期使用 After Effects 对影像与音乐节奏进行进一步整理和剪辑，最终形成一套关于未知威胁、传播与心理压迫的动态视觉表达。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">TECHNICAL PROCESS</h2>\n                <p class=\"detail-copy\">\n                  作品的核心动态视觉在 TouchDesigner 中通过 Shader 构建。通过编辑 Shader 参数与图像处理逻辑，使基础视觉不断发生扩散、扭曲、聚合与形态变化，形成类似病毒生长和传播的动态效果。在此基础上进一步结合音频分析，将声音中的节奏与强度映射到视觉参数，使图像能够随声音实时产生变化，从而建立声音与生成视觉之间的动态关系。\n                </p>\n\n                <div class=\"detail-final-flow\">\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/suicidio过程1.webp\" alt=\"SUICIDIO TouchDesigner and shader process 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/suicidio过程2.webp\" alt=\"SUICIDIO TouchDesigner and shader process 2\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/suicidio过程3.webp\" alt=\"SUICIDIO TouchDesigner and shader process 3\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/suicidio过程4.webp\" alt=\"SUICIDIO TouchDesigner and shader process 4\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/suiciduo过程5.webp\" alt=\"SUICIDIO TouchDesigner and shader process 5\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n              </section>\n\n              <section class=\"detail-section detail-section--final\">\n                <h2 class=\"detail-section-title\">FINAL VISUALS</h2>\n                <p class=\"detail-copy\">\n                  最终视觉通过不同的粒子、流体与有机形态变化呈现病毒扩散的不同状态，使同一套生成系统在时间过程中持续产生新的视觉结果。\n                </p>\n\n                <div class=\"detail-final-flow\">\n                  <div class=\"detail-grid detail-grid--two\">\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/suicidio局部1.webp\" alt=\"SUICIDIO final visual 1\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/suicidio局部2.webp\" alt=\"SUICIDIO final visual 2\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                  </div>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/suicidio局部3.webp\" alt=\"SUICIDIO final visual 3\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <div class=\"detail-grid detail-grid--two\">\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/suicidio局部4.webp\" alt=\"SUICIDIO final visual 4\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                    <figure class=\"detail-figure\">\n                      <img class=\"detail-image\" src=\"assets/thumbs/suicidio局部5.webp\" alt=\"SUICIDIO final visual 5\" draggable=\"false\" loading=\"lazy\" />\n                    </figure>\n                  </div>\n                </div>\n              </section>\n\n              <section class=\"detail-meta-block\" aria-label=\"Project metadata\">\n                <ul>\n                  <li>Type: Generative Visual / Video Art</li>\n                  <li>Year: 2025</li>\n                </ul>\n              </section>",
+    "imageCount": 11
+  },
+  "laststop": {
+    "title": "LAST STOP",
+    "subtitle": "AIGC短片",
+    "year": "2026",
+    "type": "AIGC Short Film / Experimental Film",
+    "hero": {
+      "src": "assets/thumbs/Laststop1.webp",
+      "alt": "LAST STOP hero frame"
+    },
+    "thumbnail": "assets/thumbs/Laststop封面.webp",
+    "sections": [
+      {
+        "title": "PROJECT INTRODUCTION",
+        "copy": "《LAST STOP》是一部以 AI 生成技术完成的实验性短片。作品通过一个少年深夜乘坐地铁的旅程，表现现实与梦境之间逐渐模糊的边界。随着列车前进，熟悉的城市空间开始发生变化：站点不断重复、灯光产生扭曲，窗外的城市逐渐消失在类似宇宙的黑暗之中。"
+      },
+      {
+        "title": "STORYBOARD",
+        "copy": "短片以约一分钟的夜间地铁旅程为主要叙事线索，从黑暗与星空进入现实中的地铁空间，随后逐渐进入重复、失真与超现实状态，最终以开放性的白色光源结束。"
+      },
+      {
+        "title": "FINAL FRAMES",
+        "copy": "最终画面通过重复、失真、霓虹色与超现实空间变化，将地铁从现实中的通勤场景逐渐转化为梦境空间。AI 在这里不仅作为生成工具，也作为构建不稳定、模糊和非现实视觉体验的创作媒介。"
+      }
+    ],
+    "bodyHtml": "<figure class=\"detail-figure detail-figure--panorama\">\n                <img class=\"detail-image\" src=\"assets/thumbs/Laststop1.webp\" alt=\"LAST STOP hero frame\" draggable=\"false\" />\n              </figure>\n\n              <p class=\"detail-video-link-row\">\n                <a class=\"detail-video-link\" href=\"https://www.bilibili.com/video/BV1Lf896tEdZ?vd_source=1190c9e2723a2aedd2e785749b2e6e56\" target=\"_blank\" rel=\"noopener noreferrer\">点击观看作品视频 ↗</a>\n              </p>\n\n              <section class=\"detail-section detail-section--intro\">\n                <h2 class=\"detail-section-title\">PROJECT INTRODUCTION</h2>\n                <p class=\"detail-copy\">\n                  《LAST STOP》是一部以 AI 生成技术完成的实验性短片。作品通过一个少年深夜乘坐地铁的旅程，表现现实与梦境之间逐渐模糊的边界。随着列车前进，熟悉的城市空间开始发生变化：站点不断重复、灯光产生扭曲，窗外的城市逐渐消失在类似宇宙的黑暗之中。\n                </p>\n                <p class=\"detail-copy\">\n                  项目试图通过这种不断失去稳定性的空间体验，表现当代城市生活中的孤独感、精神疲惫与迷失状态。视觉制作结合 text-to-image、image-to-video 等 AI 生成工作流，再通过数字剪辑加入镜头运动、glitch 与实验性转场，最终形成具有半色调、VHS 噪点、蓝紫黄色霓虹色调与手绘线条感的梦境式视觉语言。\n                </p>\n              </section>\n\n              <section class=\"detail-section\">\n                <h2 class=\"detail-section-title\">STORYBOARD</h2>\n                <figure class=\"detail-figure detail-figure--wide\">\n                  <img class=\"detail-image\" src=\"assets/thumbs/storyboard.webp\" alt=\"LAST STOP storyboard\" draggable=\"false\" loading=\"lazy\" />\n                </figure>\n                <p class=\"detail-copy\">\n                  短片以约一分钟的夜间地铁旅程为主要叙事线索，从黑暗与星空进入现实中的地铁空间，随后逐渐进入重复、失真与超现实状态，最终以开放性的白色光源结束。\n                </p>\n              </section>\n\n              <section class=\"detail-section detail-section--final\">\n                <h2 class=\"detail-section-title\">FINAL FRAMES</h2>\n                <p class=\"detail-copy\">\n                  最终画面通过重复、失真、霓虹色与超现实空间变化，将地铁从现实中的通勤场景逐渐转化为梦境空间。AI 在这里不仅作为生成工具，也作为构建不稳定、模糊和非现实视觉体验的创作媒介。\n                </p>\n\n                <div class=\"detail-final-flow\">\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/Laststop2.webp\" alt=\"LAST STOP final frame 1\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n\n                  <figure class=\"detail-figure detail-figure--large\">\n                    <img class=\"detail-image\" src=\"assets/thumbs/Laststop3.webp\" alt=\"LAST STOP final frame 2\" draggable=\"false\" loading=\"lazy\" />\n                  </figure>\n                </div>\n              </section>\n\n              <section class=\"detail-meta-block\" aria-label=\"Project metadata\">\n                <ul>\n                  <li>Type: AIGC Short Film / Experimental Film</li>\n                  <li>Year: 2026</li>\n                </ul>\n              </section>",
+    "imageCount": 4
+  },
+  "tastoid": {
+    "title": "TASTOID",
+    "subtitle": "原创怪味零食品牌",
+    "year": "2026",
+    "type": "Brand Identity / Character / Packaging Design",
+    "hero": {
+      "src": "assets/tastoid/updated/01.webp",
+      "alt": "TASTOID 品牌主视觉与四种味觉角色"
+    },
+    "thumbnail": "assets/tastoid/updated/thumbnail.webp",
+    "sections": [
+      {
+        "title": "Project Introduction",
+        "copy": "TASTOID 是一个围绕“味觉生物”展开的原创零食品牌设计项目。酸、甜、辣、咸被转化为四个具有独立外形与性格的角色，通过角色 IP、品牌标识、色彩与包装设计，构建一个怪趣而统一的味觉世界。"
+      },
+      {
+        "title": "Character Design",
+        "copy": "四种味觉分别对应 ZING、MELLO、SCOVI 和 CRISP。角色通过轮廓、表情与色彩形成差异，在保留各自性格的同时，使用统一的造型语言建立品牌识别。"
+      },
+      {
+        "title": "Visual Identity",
+        "copy": "奶油米与怪味红构成品牌的基础视觉，海盐蓝、酸味绿、辣味橙和棉花糖粉进一步区分不同口味。手绘感标识与角色图形组合，让“每一种怪味，都有自己的性格”贯穿视觉系统。"
+      },
+      {
+        "title": "Illustration",
+        "copy": "品牌插画将四种味觉角色与零食、糖果和手绘文字结合，以鲜明的色彩与活泼的场景延展 TASTOID 的怪趣世界。"
+      },
+      {
+        "title": "Packaging Design",
+        "copy": "包装以角色作为主要识别元素，将不同口味与对应色彩结合。统一的标识、信息层级和角色布局，使各款产品既能独立呈现，也能组成完整的品牌系列。"
+      },
+      {
+        "title": "Brand Application",
+        "copy": "品牌视觉延伸到展示、野餐与观影等场景。角色、包装和辅助图形在不同画面中保持一致，让味觉世界融入日常零食体验。"
+      }
+    ],
+    "bodyHtml": "<figure class=\"detail-figure detail-figure--panorama\"><img class=\"detail-image\" src=\"assets/tastoid/updated/01.webp\" alt=\"TASTOID 品牌主视觉与四种味觉角色\" width=\"1920\" height=\"1080\" loading=\"eager\" decoding=\"async\" draggable=\"false\" /></figure><p class=\"detail-video-link-row\"><a class=\"detail-video-link\" data-external-video-project=\"tastoid\" href=\"https://www.bilibili.com/video/BV1BWsP66EzG?vd_source=1190c9e2723a2aedd2e785749b2e6e56\" target=\"_blank\" rel=\"noopener noreferrer\">点击观看作品视频 ↗</a></p><section class=\"detail-section\"><h2 class=\"detail-section-title\">Project Introduction</h2><p class=\"detail-copy\">TASTOID 是一个围绕“味觉生物”展开的原创零食品牌设计项目。酸、甜、辣、咸被转化为四个具有独立外形与性格的角色，通过角色 IP、品牌标识、色彩与包装设计，构建一个怪趣而统一的味觉世界。</p><div class=\"detail-image-stack\"><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/02.webp\" alt=\"TASTOID 品牌概念与味觉世界\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure></div></section><section class=\"detail-section\"><h2 class=\"detail-section-title\">Character Design</h2><p class=\"detail-copy\">四种味觉分别对应 ZING、MELLO、SCOVI 和 CRISP。角色通过轮廓、表情与色彩形成差异，在保留各自性格的同时，使用统一的造型语言建立品牌识别。</p><div class=\"detail-image-stack\"><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/03.webp\" alt=\"四种味觉角色的正面、侧面与背面\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure></div></section><section class=\"detail-section\"><h2 class=\"detail-section-title\">Visual Identity</h2><p class=\"detail-copy\">奶油米与怪味红构成品牌的基础视觉，海盐蓝、酸味绿、辣味橙和棉花糖粉进一步区分不同口味。手绘感标识与角色图形组合，让“每一种怪味，都有自己的性格”贯穿视觉系统。</p><div class=\"detail-image-stack\"><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/04.webp\" alt=\"TASTOID 品牌色彩系统\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/05.webp\" alt=\"TASTOID 标识组合与品牌口号\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure></div></section><section class=\"detail-section\"><h2 class=\"detail-section-title\">Illustration</h2><p class=\"detail-copy\">品牌插画将四种味觉角色与零食、糖果和手绘文字结合，以鲜明的色彩与活泼的场景延展 TASTOID 的怪趣世界。</p><div class=\"detail-image-stack\"><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/06.webp\" alt=\"TASTOID 品牌插画 06\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/07.webp\" alt=\"TASTOID 品牌插画 07\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure></div></section><section class=\"detail-section\"><h2 class=\"detail-section-title\">Packaging Design</h2><p class=\"detail-copy\">包装以角色作为主要识别元素，将不同口味与对应色彩结合。统一的标识、信息层级和角色布局，使各款产品既能独立呈现，也能组成完整的品牌系列。</p><div class=\"detail-image-stack\"><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/08.webp\" alt=\"海盐与酸味系列包装\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/09.webp\" alt=\"辣味与甜味系列包装\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure></div></section><section class=\"detail-section\"><h2 class=\"detail-section-title\">Brand Application</h2><p class=\"detail-copy\">品牌视觉延伸到展示、野餐与观影等场景。角色、包装和辅助图形在不同画面中保持一致，让味觉世界融入日常零食体验。</p><div class=\"detail-image-stack\"><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/10.webp\" alt=\"品牌产品陈列场景\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/11.webp\" alt=\"野餐场景中的包装应用\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure><figure class=\"detail-figure detail-figure--wide\"><img class=\"detail-image\" src=\"assets/tastoid/updated/12.webp\" alt=\"观影场景中的品牌应用\" width=\"1920\" height=\"1080\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" /></figure></div></section><section class=\"detail-meta-block\" aria-label=\"Project metadata\"><ul><li>Type: Brand Identity / Character / Packaging Design</li><li>Year: 2026</li></ul></section>",
+    "imageCount": 12
+  }
+};

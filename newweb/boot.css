@@ -1,0 +1,26 @@
+.crt-boot { display: none; }
+.booting body, .revealing body { background: #000; }
+.booting .desktop { visibility: hidden; }
+.booting .desktop *, .revealing .desktop * { animation-play-state: paused !important; }
+.booting .crt-boot { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: #000; }
+.dialing-window { position: relative; width: min(84vw, 82svh, 460px); transform: scale(.5); aspect-ratio: 1567 / 790; --dialing-center: 59%; }
+.dialing-window img { display: block; position: absolute; height: auto; }
+.dialing-frame { inset: 0; width: 100%; }
+.dialing-earth { left: 12%; top: var(--dialing-center); width: 25%; translate: 0 -49%; clip-path: circle(43% at 50% 49%); }
+.dialing-computer { left: 60%; top: var(--dialing-center); width: 31%; translate: 0 -49.5%; }
+.dialing-dots { position: absolute; left: 42.5%; top: var(--dialing-center); translate: 0 -50%; width: 16%; display: flex; gap: 13%; }
+.dialing-dots i { width: 11%; aspect-ratio: 1; background: #70efff; box-shadow: 1px 1px #001781; opacity: 0; }
+.dialing-running .dialing-dots i { animation: dialing-dot 1s steps(1, end) 3; }
+.dialing-running .dialing-dots i:nth-child(2) { animation-name: dialing-dot-two; }
+.dialing-running .dialing-dots i:nth-child(3) { animation-name: dialing-dot-three; }
+.dialing-running .dialing-dots i:nth-child(4) { animation-name: dialing-dot-four; }
+@keyframes dialing-dot { 0%, 100% { opacity: 0; } 20% { opacity: 1; } }
+@keyframes dialing-dot-two { 0%, 100% { opacity: 0; } 40% { opacity: 1; } }
+@keyframes dialing-dot-three { 0%, 100% { opacity: 0; } 60% { opacity: 1; } }
+@keyframes dialing-dot-four { 0%, 100% { opacity: 0; } 80% { opacity: 1; } }
+.revealing .desktop { animation: desktop-power-on .75s cubic-bezier(.65, 0, .84, .44) both; }
+@keyframes desktop-power-on { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .dialing-window { display: none; }
+  .revealing .desktop { animation: none; }
+}

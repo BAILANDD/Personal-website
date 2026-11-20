@@ -3,10 +3,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const sourceDir = path.join(root, "website");
+const sourceDir = path.join(root, "newweb");
 const outputDir = path.join(root, "dist");
-const excludedNames = new Set([".DS_Store", "Thumbs.db"]);
-const excludedRelativeDirs = new Set([path.join("assets", "videos")]);
+const excludedNames = new Set([".DS_Store", "Thumbs.db", "README.md", "migration-report.json"]);
+const excludedRelativeDirs = new Set(["tests", "scripts"]);
 
 async function assertDirectory(directory, label) {
   try {

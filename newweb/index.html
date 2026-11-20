@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zhuanz · Personal Space</title><meta name="description" content="Welcome to Zhuanz's personal space — work, process and playful experiments."><link rel="preload" as="image" href="assets/背景2.webp" fetchpriority="high" data-layer="scene">
+<link rel="preload" as="image" href="assets/天空.webp" fetchpriority="high" data-layer="sky">
+<script>
+  if (!location.hash && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward') {
+    document.documentElement.classList.add('booting');
+    setTimeout(() => document.documentElement.classList.remove('booting', 'revealing'), 10000);
+  }
+</script>
+<link rel="stylesheet" href="boot.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="explorer.css"></head>
+<body>
+<div class="crt-boot" role="status" aria-label="Dialing Progress，正在加载主页">
+  <div class="dialing-window">
+    <img class="dialing-frame" src="assets/Dialing_Progress.png" alt="" fetchpriority="high">
+    <img class="dialing-earth" src="assets/像素地球.png" alt="">
+    <div class="dialing-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <img class="dialing-computer" src="assets/复古电脑电话.png" alt="">
+  </div>
+</div>
+<main class="desktop" aria-label="个人网站复古桌面">
+<div class="arch-entry"><svg viewBox="0 0 178 140" aria-label="Photography"><a href="photography.html" aria-label="Enter Photography"><title>Enter Photography</title><path d="M 1 139 L 1 76 C 1 33 34 1 85 1 C 135 1 175 33 176 76 L 176 139 Z"/></a></svg><span class="arch-tooltip">Enter Photography ↗</span></div>
+<a class="photography-fallback" href="photography.html" hidden>Photography ↗</a>
+<nav class="shortcuts" aria-label="主导航">
+<button data-page="Resume" aria-label="个人简历"><img src="assets/home.webp" alt=""><img class="label" src="assets/cv.webp" alt="CV"></button>
+<button data-page="Files" aria-label="Files"><img src="assets/work.webp" alt=""><img class="label" src="assets/file按键.webp" alt="Files"></button>
+<button data-page="Links" aria-label="Links"><img src="assets/链接.webp" alt=""><img class="label" src="assets/links按键.webp" alt="Links"></button>
+</nav>
+<div class="star decoration"><img src="assets/星星.webp" alt="" draggable="false"></div>
+<aside class="window music"><div class="titlebar">Vibes <span>♫</span></div><div class="equalizer" aria-hidden="true"></div><div class="music-caption">A little visual rhythm</div><button id="motion" aria-pressed="true" aria-label="暂停动态效果">Ⅱ</button></aside>
+<section class="computer" aria-label="个人主页">
+<div class="screen"><div id="screen-content"></div></div>
+
+</section>
+
+<div class="mobile-note">WELCOME TO MY LITTLE CORNER OF THE INTERNET</div>
+
+<section class="window utility-window" id="utility-window" role="dialog" aria-labelledby="utility-title" hidden><div class="titlebar"><b id="utility-title">About</b><button id="utility-close" aria-label="关闭窗口">×</button></div><div id="utility-content"></div></section>
+</main>
+<script src="scene-geometry.js"></script>
+<script src="app.js"></script>
+<script src="boot.js"></script>
+<script src="projects.js"></script>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/Flip.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="explorer-motion.js"></script>
+<script src="explorer-lightbox.js"></script>
+<script src="operations.js"></script>
+<script src="explorer.js"></script>
+</body></html>
